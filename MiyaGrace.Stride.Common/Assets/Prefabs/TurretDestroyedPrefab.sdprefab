@@ -1,0 +1,207 @@
+!PrefabAsset
+Id: 8229672f-ccd7-47f8-8668-883856709f61
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 957faa64-151e-4c10-bb69-d95f15e76d39
+    Parts:
+        -   Entity:
+                Id: 2e6a6b8f-cca6-4ba2-ab8e-ba1f8a2cac09
+                Name: TurretCannon
+                Components:
+                    e43ace4b45eedb8be14cde3051c11427: !TransformComponent
+                        Id: d9e8bf06-7d9c-45ed-a0aa-fdbd1aa4e1b5
+                        Position: {X: 0.0, Y: 0.21562183, Z: 0.0}
+                        Rotation: {X: -0.6347499, Y: 0.0, Z: 0.0, W: 0.77271765}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1efbae924543a859f187c92f146ceb0b: !ModelComponent
+                        Id: 6f69e251-044a-4b12-8052-c5d5e9649f7e
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+                    5abef10b23dfea06b4497cb0b5a7785e: !RigidbodyComponent
+                        Id: 4ed79468-a911-4a5c-bedd-021ece4ecab1
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            32d2fac279964d13b33d592932e75266: !CylinderColliderShapeDesc
+                                Height: 3.0
+                                Radius: 0.1
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 1.0}
+                                LocalRotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                    005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
+                        Id: 8236913d-a245-4b37-9731-4b025fa414a9
+                        MinimumImpulseForce: 0.0
+                        MaximumImpulseForce: 20.0
+        -   Entity:
+                Id: 92f8f8a9-d7f4-474d-9e6e-b7866e9c59fd
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: 239855e0-0d38-40af-bb75-9f225e538137
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: b594dd82-1b84-45eb-ba5a-af5776256a54
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+                    7bd394e6a4a8cf58b548edc548eec42c: !RigidbodyComponent
+                        Id: 86ce799d-79ff-4e58-bee9-88a891651636
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            919d5fa9ef715bcc338be103646d3407: !CylinderColliderShapeDesc
+                                Height: 2.5
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 1.25, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    84114f4af4bce92371be16321e458b6b: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
+                        Id: 4475bada-a4ec-4382-9a5f-dd2e2730a2e3
+                        MinimumImpulseForce: 0.0
+                        MaximumImpulseForce: 20.0
+        -   Entity:
+                Id: 930c941c-1175-4c71-895b-4614514eb2b6
+                Name: InitialExplosionParticles
+                Components:
+                    6f4e5a99d9bbd0f35719a6a62088e3a1: !TransformComponent
+                        Id: 160c08ba-0d2e-4591-a05c-7cb62fb1b087
+                        Position: {X: 0.0, Y: 1.7677003, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    14e05da19f61d68e8eee6446d30552e6: !ParticleSystemComponent
+                        Id: 842f77f7-c234-4ba1-a8da-0c6332cd5c72
+                        Control:
+                            ResetSeconds: 2.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                49c0be42540e0095a6fffb0f38dd0c33:
+                                    ParticleLifetime: {X: 1.0, Y: 2.0}
+                                    ShapeBuilder: !ShapeBuilderHexagon
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeFloat4
+                                            Value: {X: 20.0, Y: 20.0, Z: 5.0, W: 0.0}
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        3b1c0338e29cb7f49ef36528e35b6e2c: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 100
+                                    Initializers:
+                                        3264b1bc1215b47ed0ca101e7637e5d1: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.05, Y: 0.1}
+                                        9873e8ce90c1623faf144cb06117ef45: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            PositionMax: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            Interpolate: false
+                                        e8509a149508417a3a65f49d649faf27: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -20.0, Y: -20.0, Z: -20.0}
+                                            VelocityMax: {X: 20.0, Y: 20.0, Z: 20.0}
+                                    Updaters:
+                                        dd4d6d20e340183fe156e8e6762afaa5: !UpdaterGravity
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            GravitationalAcceleration: {X: 0.0, Y: -9.80665, Z: 0.0}
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+        -   Entity:
+                Id: 957faa64-151e-4c10-bb69-d95f15e76d39
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: b50900fd-d073-4ee2-9d38-3d46a8087ffa
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 239855e0-0d38-40af-bb75-9f225e538137
+                            33f2b671ac95b8bf1394e6841a413356: ref!! d9e8bf06-7d9c-45ed-a0aa-fdbd1aa4e1b5
+                            e45f3fec64920cd5d60c898373c3d80c: ref!! 160c08ba-0d2e-4591-a05c-7cb62fb1b087
+                    64a1f437baa5eacdb703635f53c8cc1e: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
+                        Id: cc56506d-35e4-404a-a45f-1f916a0eba10
+                        LifetimeSeconds: 2.0
+                        PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion

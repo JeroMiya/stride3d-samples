@@ -1,0 +1,15 @@
+!Model
+Id: 1c0349b3-e22c-49f2-a63b-2230ddf30900
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file TurretBase.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    0cf7aa7df79ab13e81d352689e2f4352:
+        Name: Material
+        MaterialInstance:
+            Material: 5898e43a-2b95-44c1-9799-2fe2bebb8a43:Models/primaryColors
+Modifiers: {}
+~SourceHashes:
+    6b66e62f095ef24fb4ec4f4245fbf8fc~TurretBase.fbx: 41c8caf280cce14ac520de651cc51911

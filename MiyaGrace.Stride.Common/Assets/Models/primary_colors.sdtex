@@ -1,0 +1,12 @@
+!Texture
+Id: e8757e46-7179-4037-9e47-7e8a3687206c
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file primary_colors.png
+IsCompressed: false
+Type: !ColorTextureType
+    UseSRgbSampling: false
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false
+GenerateMipmaps: false
+IsStreamable: false

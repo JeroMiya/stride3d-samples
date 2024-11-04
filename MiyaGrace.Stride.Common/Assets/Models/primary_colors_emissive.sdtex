@@ -1,0 +1,11 @@
+!Texture
+Id: f87c901a-81b5-4506-a026-fe60938bca0b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file primary_colors_emissive.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false
+GenerateMipmaps: false
+IsStreamable: false

@@ -1,0 +1,27 @@
+!SceneAsset
+Id: 3a80c0ad-e889-47cb-9e16-a62315c085c4
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 104b540f-6260-400d-a0e6-112b16b6ef99
+    Parts:
+        -   Entity:
+                Id: 104b540f-6260-400d-a0e6-112b16b6ef99
+                Name: PauseMenu
+                Components:
+                    a23a41c62ff3bf556486c7a2535ac2a3: !TransformComponent
+                        Id: f98267b9-8acc-4d32-b24f-0b6f350d587d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ba00891325d4d4c0682e41101bff0f7: !UIComponent
+                        Id: c1f5a656-4551-4cad-9d72-0593c8d86388
+                        Page: 34ddbbe5-1e82-4b3f-a929-36cd146b9232:Scenes/PauseMenu/PauseMenuPage
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    157fb7f0710adc3fd34a0b13e1797c52: !SandboxSceneBrowser.PauseMenuLogic,SandboxSceneBrowser
+                        Id: 7df64923-0c76-485f-a982-927fab15429c

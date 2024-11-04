@@ -1,0 +1,8 @@
+!Sound
+Id: 0d433897-be6c-4dcc-9418-a6106ce8d6e8
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file laserShoot.wav
+CompressionRatio: 1
+StreamFromDisk: false
+Spatialized: true

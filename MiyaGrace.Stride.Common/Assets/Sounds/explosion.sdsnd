@@ -1,0 +1,8 @@
+!Sound
+Id: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file explosion.wav
+CompressionRatio: 1
+StreamFromDisk: false
+Spatialized: true

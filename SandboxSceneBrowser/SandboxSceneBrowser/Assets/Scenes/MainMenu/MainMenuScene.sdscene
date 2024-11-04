@@ -1,0 +1,27 @@
+!SceneAsset
+Id: b5dbcaf5-3d27-41de-a40d-85e1796ea4e0
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! eecbc70f-b5ef-4741-8ee7-d7bfcb0dc00e
+    Parts:
+        -   Entity:
+                Id: eecbc70f-b5ef-4741-8ee7-d7bfcb0dc00e
+                Name: LevelSelector
+                Components:
+                    736a925703a048e952a93ec47971b825: !TransformComponent
+                        Id: 650f7a6d-d5c8-4586-84a4-14e0bf5c17f7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0397f4fcea3d7936e1d26d07e5f4489b: !UIComponent
+                        Id: dc9b8fc5-f728-4c5c-905d-edb485a8f2a2
+                        Page: 362a7b98-e8c3-47a3-a213-02d9c340116e:Scenes/MainMenu/MainMenuUi
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    d84947ea7dfa0a6c7c0455490ebbac8b: !SandboxSceneBrowser.MainMenuLogic,SandboxSceneBrowser
+                        Id: 8563373a-f4c5-466c-ade8-982c646d56d0

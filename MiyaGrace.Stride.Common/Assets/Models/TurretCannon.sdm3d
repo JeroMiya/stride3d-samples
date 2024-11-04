@@ -1,0 +1,16 @@
+!Model
+Id: d940d92f-0819-4641-a732-65d2d08a64e8
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file TurretCannon.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    71d6938a0c75cf03e9c44558fb1fdf19:
+        Name: Material
+        MaterialInstance:
+            Material: 5898e43a-2b95-44c1-9799-2fe2bebb8a43:Models/primaryColors
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    e60f8f6f3db2b0bfec6237772d71f81f~TurretCannon.fbx: b44918b1f04145b8020e2d35ddca59d8

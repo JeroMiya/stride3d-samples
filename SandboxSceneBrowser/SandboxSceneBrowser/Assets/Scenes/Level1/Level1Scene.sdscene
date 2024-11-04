@@ -1,0 +1,946 @@
+!SceneAsset
+Id: 326b6449-df21-4dd4-87c9-00e903f68add
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 65be1f30-4316-4e09-bfe5-a5953c35e83f
+        - ref!! 3112acd0-8d8d-4842-b206-2a315b26c34a
+        - ref!! 04c607ba-a8c8-4c2e-bc8d-d6ce8921769f
+        - ref!! de951783-e382-4eaf-82d6-ca25443d8724
+        - ref!! 53b3b12c-c56b-4980-a784-1eb4c3fa68ff
+        - ref!! 18ad4b1d-1e1d-49b1-9c6e-fb72a6170ce5
+        - ref!! a6e02581-4d03-480e-9151-0a8c43996f97
+        - ref!! f77a4d96-ba02-4e72-9697-bdca72d13534
+        - ref!! 510be402-f6ea-47d1-8980-d9e0b4a2bee7
+        - ref!! 344f6b35-fb00-4c62-97ba-aa798809e810
+        - ref!! 89141b9c-4507-4dfc-bb41-3a320d6238e0
+    Parts:
+        -   Entity:
+                Id: 04c607ba-a8c8-4c2e-bc8d-d6ce8921769f
+                Name: Ground
+                Components:
+                    3259c2810b66d1b192518dbb5befb520: !TransformComponent
+                        Id: e2d8b712-3abc-456b-92f7-2752d4462338
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1000.0, Y: 1.0, Z: 1000.0}
+                        Children: {}
+                    85131bf9df851fcbea2bbcefa89348e7: !ModelComponent
+                        Id: 83650884-05bf-422a-b776-cbda54c243fa
+                        Model: 776785fe-a5e0-4841-a0d3-c3d2cebc8882:Ground
+                        Materials: {}
+                    d9824877842ecb4a3ce05ac749132ff1: !StaticColliderComponent
+                        Id: 0244c24a-e04f-4d80-95a3-76ea6a386893
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            00ddaf50ff54531aa30685f1eb97da0f: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Folder: null
+            Entity:
+                Id: 1135786c-0f97-4b2d-bcee-89e07b2f4c4b
+                Name: TurretCannon
+                Components:
+                    0236d343576769856429a90cd1406260: !TransformComponent
+                        Id: 08be3b02-e8bc-4f2b-9c1a-670d1d2278fb
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d8f66e0f614bda9b83557d3dce57ec3: !ModelComponent
+                        Id: 110f781c-91be-4cc4-8715-193d2ba4bfd8
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: e92293c6-0002-489d-9818-764fe59a1e26
+                InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
+        -   Entity:
+                Id: 18ad4b1d-1e1d-49b1-9c6e-fb72a6170ce5
+                Name: Turret
+                Components:
+                    bb666080d8f32da3cf7e48ec31bece74: !TransformComponent
+                        Id: f4626992-b34c-4f38-b57e-44cd485bcee7
+                        Position: {X: 1.3779914, Y: 0.0, Z: 2.429625}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3fac1d24cdbb05eb9d61f7a10549e48f: ref!! b197725b-71ee-4a26-a3a6-065d1aae8f9c
+        -   Folder: null
+            Entity:
+                Id: 221de681-23bd-4099-afb9-52e9aca0089a
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: b197725b-71ee-4a26-a3a6-065d1aae8f9c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 6e487adc-247b-44e8-ab78-75187dbecba6
+                            5b798ce0603968b062ba9e25598db50d: ref!! e697835f-f7eb-4862-9edc-a4c5600a38be
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                        Id: e5a27313-6824-4cd3-94b4-d9e2287b292f
+                        MaxHealth: 10.0
+                        Defense: 0.0
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                        Id: d4d16dd1-481a-49d5-b1f1-0ca859317bfc
+                        SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
+                        PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
+                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
+                        Id: 5cdd1c3f-c9ab-414c-9fb8-3bac188c51b4
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
+                InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
+        -   Folder: null
+            Entity:
+                Id: 23556090-81e2-460b-a56f-bc0a4936b475
+                Name: TurretCannon
+                Components:
+                    0236d343576769856429a90cd1406260: !TransformComponent
+                        Id: 78871039-7677-44c4-8393-8b0c726da8c8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d8f66e0f614bda9b83557d3dce57ec3: !ModelComponent
+                        Id: d05c662e-c8fd-4e39-b8f4-17b5e291eee0
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: e92293c6-0002-489d-9818-764fe59a1e26
+                InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
+        -   Folder: null
+            Entity:
+                Id: 2a991e94-f360-4223-9675-0ab4e0b621dd
+                Name: TurretCannon
+                Components:
+                    0236d343576769856429a90cd1406260: !TransformComponent
+                        Id: b3f372f8-96c7-4306-a305-3f84fffefad1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d8f66e0f614bda9b83557d3dce57ec3: !ModelComponent
+                        Id: 06636660-f0c0-450a-8614-03020905e9e6
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: e92293c6-0002-489d-9818-764fe59a1e26
+                InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Folder: null
+            Entity:
+                Id: 2aad024a-447a-44b4-9c17-ceaf64025507
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: 578b420b-7fea-4b93-9a2e-391400064b50
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! fec9e035-d5fc-4dd9-aee7-b606134496e6
+                            5b798ce0603968b062ba9e25598db50d: ref!! 2a458989-2f76-42ee-a26b-ed3b80e6868c
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                        Id: 7f189291-0b3e-4937-8d5d-29d2625be916
+                        MaxHealth: 10.0
+                        Defense: 0.0
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                        Id: a2d8db7c-f090-4224-9a9c-62774ba12930
+                        SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
+                        PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
+                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
+                        Id: 34030f3f-c3ed-41c4-ae43-d3ea6cf75501
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
+                InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Entity:
+                Id: 3112acd0-8d8d-4842-b206-2a315b26c34a
+                Name: Skybox
+                Components:
+                    f19568235c78348a718b84affcdfb82b: !TransformComponent
+                        Id: 39ccc643-15f3-4692-8546-cd765180d303
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5d65440068e661a4ccc2586815aa357e: !BackgroundComponent
+                        Id: cc8ef2aa-b93a-4d6e-8007-f0df5a43f066
+                        Texture: f7f37a19-5307-430b-af4b-e50bfe86272c:Skybox texture
+                    fc265d79320d6897d45e30c8f09399be: !LightComponent
+                        Id: 379e7226-b6a3-4c7c-b7c6-668db5b1bd86
+                        Type: !LightSkybox
+                            Skybox: df25bc58-35e5-45d3-a007-57b19eb5c69e:Skybox
+                        Intensity: 2.0
+        -   Entity:
+                Id: 344f6b35-fb00-4c62-97ba-aa798809e810
+                Name: Turret
+                Components:
+                    bb666080d8f32da3cf7e48ec31bece74: !TransformComponent
+                        Id: b9fc9c62-be83-4da5-b69d-3de25a4f061d
+                        Position: {X: -13.120869, Y: 0.0, Z: 2.429625}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3fac1d24cdbb05eb9d61f7a10549e48f: ref!! 578b420b-7fea-4b93-9a2e-391400064b50
+        -   Folder: null
+            Entity:
+                Id: 3ec35ffa-a099-4f29-bbdc-357aaf7ca181
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: 6e487adc-247b-44e8-ab78-75187dbecba6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: 531d5adf-3a65-40c8-ade7-be3d7e338d01
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
+                InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
+        -   Folder: null
+            Entity:
+                Id: 43083814-cf0f-4ffd-80b0-ca268e713eb3
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: 88d79dd7-6c4b-41a5-a8d0-ae8cbbcd6cbc
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: ab7dad57-d9b9-4bc1-8aa6-02c362a3ecbf
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
+                InstanceId: caa0c4fd-43a3-40db-b4fb-8d9df5e188b5
+        -   Folder: null
+            Entity:
+                Id: 47cad582-34e8-4fc5-9d82-525c6d594d2c
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: 75b70446-4b1b-47ba-b415-22c2656a60c0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 88d79dd7-6c4b-41a5-a8d0-ae8cbbcd6cbc
+                            5b798ce0603968b062ba9e25598db50d: ref!! fda6a1f4-b117-4c3c-8660-13ef581db494
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                        Id: a273c2dd-c300-42d3-9a87-e2e078d39f8a
+                        MaxHealth: 10.0
+                        Defense: 0.0
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                        Id: 5a918f83-03e4-41f1-9464-a4ea3947749a
+                        SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
+                        PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
+                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
+                        Id: ab553410-31e7-45b7-8c2a-286820db2c2a
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
+                InstanceId: caa0c4fd-43a3-40db-b4fb-8d9df5e188b5
+        -   Entity:
+                Id: 510be402-f6ea-47d1-8980-d9e0b4a2bee7
+                Name: Turret
+                Components:
+                    bb666080d8f32da3cf7e48ec31bece74: !TransformComponent
+                        Id: 551525ae-0aa7-46a9-8f4a-bbd6a46630e9
+                        Position: {X: -8.385513, Y: 0.0, Z: 2.429625}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3fac1d24cdbb05eb9d61f7a10549e48f: ref!! 2193ebef-80d4-40c7-9cea-471c4d95d304
+        -   Folder: null
+            Entity:
+                Id: 51edda8c-62c8-484b-bcff-6e6ab724e57a
+                Name: FirstPersonCharacterCamera
+                Components:
+                    87bfd72cb5ef7e1e7be179fa4fe8a128: !TransformComponent
+                        Id: d4399253-00db-4e12-b6c2-b04848277cdb
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -1.0, Z: -0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d60acbea4ecebbaff2fa44d4b770763e: !CameraComponent
+                        Id: b6607c33-0542-4a8f-849f-f68b8ba0b25f
+                        Name: null
+                        Projection: Perspective
+                        Slot: 02013c70-66b7-42d0-8aa0-3775873b98e5
+                    3b4cf142e4e949f080dc411d917a27a3: !AudioListenerComponent
+                        Id: 1e3620fb-a934-42e1-a52a-e779cce7c751
+        -   Entity:
+                Id: 53b3b12c-c56b-4980-a784-1eb4c3fa68ff
+                Name: PlayerEntityStartupScript
+                Components:
+                    12531fb47fcdb38fcb1a6c2ca3389131: !TransformComponent
+                        Id: cef7f49f-d171-49f8-8de3-43e6ad936aa5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    297022fb9941668c16f19e18d54a2db1: !MiyaGrace.Stride.Common.PlayerEntityStartupScript,MiyaGrace.Stride.Common
+                        Id: 44471431-8748-44cc-b038-cd89175f8d5c
+                        PlayerEntity: ref!! 89141b9c-4507-4dfc-bb41-3a320d6238e0
+                        CameraPivotEntity: ref!! 89141b9c-4507-4dfc-bb41-3a320d6238e0
+        -   Folder: null
+            Entity:
+                Id: 5a18e9e1-4a47-40e0-9510-bd67b218c2fe
+                Name: ProjectileSpawnPoint
+                Components:
+                    1aece97aa9b503fbbd42c94234f1b274: !TransformComponent
+                        Id: fcbf10f8-dcca-4aae-adb8-3d27a7f28e75
+                        Position: {X: 0.0, Y: 0.0, Z: 2.1454048}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: 28182836-f205-4d45-8220-2f0eea50d8b0
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        FireRate: 0.3
+                        MaxDistance: 100.0
+                        CollideWithGroup: CharacterFilter
+                        CollideWithTriggers: true
+                    589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
+                        Id: 987cca62-fcd3-429a-9e46-f7d0fa060b3f
+                        Sounds:
+                            6db19c753898e150f5c5347f361984e4~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 00231250-d9d5-4371-9fdc-b971cdf5363a
+                InstanceId: caa0c4fd-43a3-40db-b4fb-8d9df5e188b5
+        -   Folder: null
+            Entity:
+                Id: 5b0d86a0-e097-4214-97d9-733e4f4b25fc
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: bb55795a-7a80-4d2a-947c-b8016dcbc21f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: dff9371a-5ae7-4a9e-816a-196f77c9521c
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
+                InstanceId: ed138c7c-6b9c-45b5-92c7-3e471cb40660
+        -   Folder: null
+            Entity:
+                Id: 5b524a17-75a3-4f9b-ab52-8db47d639a69
+                Name: CannonRoot
+                Components:
+                    eeb5447be25a14792624211a1c2e37d9: !TransformComponent
+                        Id: fda6a1f4-b117-4c3c-8660-13ef581db494
+                        Position: {X: 0.0, Y: 1.8352602, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3d43ec7c6c4dccfd97236cd33aeda06a: ref!! 17213de4-f946-4470-a137-0ae2080bb912
+                            71731564af71293dd2ea6be9aedf269e: ref!! fcbf10f8-dcca-4aae-adb8-3d27a7f28e75
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                        Id: 1b7118b7-f04d-4fdf-94ff-650e06cabed4
+                        TurnSpeed: 0.1
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
+                InstanceId: caa0c4fd-43a3-40db-b4fb-8d9df5e188b5
+        -   Entity:
+                Id: 65be1f30-4316-4e09-bfe5-a5953c35e83f
+                Name: Directional light
+                Components:
+                    84381de94e091dbcefe709d08a9346cb: !TransformComponent
+                        Id: 52a7d845-3f6a-4254-bad0-097248f645eb
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    11c8b3510bb1f6143190ac619a8b6ac8: !LightComponent
+                        Id: 588b6eb6-eed0-4691-9344-4caffbe9e164
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Folder: null
+            Entity:
+                Id: 6bbf7ae4-6113-44ef-9aec-f3bebfa57411
+                Name: ProjectileSpawnPoint
+                Components:
+                    1aece97aa9b503fbbd42c94234f1b274: !TransformComponent
+                        Id: 576f7724-d306-4233-842b-949df9524dc2
+                        Position: {X: 0.0, Y: 0.0, Z: 2.1454048}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: 34561046-e760-4b36-9acd-2c26b4e1ae07
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        FireRate: 0.3
+                        MaxDistance: 100.0
+                        CollideWithGroup: CharacterFilter
+                        CollideWithTriggers: true
+                    589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
+                        Id: 3c6b5de8-295e-4c9a-a161-de6cc6505f9e
+                        Sounds:
+                            6db19c753898e150f5c5347f361984e4~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 00231250-d9d5-4371-9fdc-b971cdf5363a
+                InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
+        -   Folder: null
+            Entity:
+                Id: 6cbaa426-1782-4a12-9976-6a6585dd1270
+                Name: ProjectileSpawnPoint
+                Components:
+                    1aece97aa9b503fbbd42c94234f1b274: !TransformComponent
+                        Id: 9e6195d6-c696-437a-8e12-e5a3d9d7e898
+                        Position: {X: 0.0, Y: 0.0, Z: 2.1454048}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: 9daf6a80-6c9c-4b54-bd12-4d46de07c6b3
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        FireRate: 0.3
+                        MaxDistance: 100.0
+                        CollideWithGroup: CharacterFilter
+                        CollideWithTriggers: true
+                    589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
+                        Id: c2607cba-b220-4e2a-b221-b91af6296d10
+                        Sounds:
+                            6db19c753898e150f5c5347f361984e4~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 00231250-d9d5-4371-9fdc-b971cdf5363a
+                InstanceId: ed138c7c-6b9c-45b5-92c7-3e471cb40660
+        -   Folder: null
+            Entity:
+                Id: 727f5b63-fc5d-4c6a-9831-918980705efa
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: 9dcc42b9-ddec-47f8-a07d-34c13735b921
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! bb55795a-7a80-4d2a-947c-b8016dcbc21f
+                            5b798ce0603968b062ba9e25598db50d: ref!! cc9bdbf0-3d0c-42b7-8876-2205063b0c14
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                        Id: a7ea861c-9e14-4718-931a-778a97ab19f2
+                        MaxHealth: 10.0
+                        Defense: 0.0
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                        Id: ad1aedf3-f24a-4a1a-8eac-037d460cb8b0
+                        SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
+                        PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
+                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
+                        Id: 19fde4f2-2e1f-4769-857c-28695748a617
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
+                InstanceId: ed138c7c-6b9c-45b5-92c7-3e471cb40660
+        -   Folder: null
+            Entity:
+                Id: 73355398-ffdf-433a-a9cc-78263e9d1f9c
+                Name: CannonRoot
+                Components:
+                    eeb5447be25a14792624211a1c2e37d9: !TransformComponent
+                        Id: 671ebde7-1211-4889-bed9-8a2caca742f7
+                        Position: {X: 0.0, Y: 1.8352602, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3d43ec7c6c4dccfd97236cd33aeda06a: ref!! 78871039-7677-44c4-8393-8b0c726da8c8
+                            71731564af71293dd2ea6be9aedf269e: ref!! 3442b55a-129d-4c96-95ab-e15c5aac5537
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                        Id: d3d01f58-fecb-4997-b047-d7936a395ade
+                        TurnSpeed: 0.1
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
+                InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
+        -   Folder: null
+            Entity:
+                Id: 74bdb857-02e0-43f2-a14b-d5d64291e7bc
+                Name: CameraPivot
+                Components:
+                    e2bbb0970a0650d5f8f52b96bb134c2a: !TransformComponent
+                        Id: dfe2f761-af7f-46c2-9be6-87d670b90ae8
+                        Position: {X: 0.0, Y: 0.8744391, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5b851ffd90b10fe144967ba4425cd3b9: ref!! d4399253-00db-4e12-b6c2-b04848277cdb
+                            7b0fb1ce1c59d98aabbb92cc47ec7f40: ref!! 55d69f1b-f9e8-47a2-a2ea-00eeb87ba61e
+        -   Folder: null
+            Entity:
+                Id: 88db8f1b-d7f6-44ab-ad9e-7a875ca2e5d3
+                Name: ProjectileSpawnPoint
+                Components:
+                    1aece97aa9b503fbbd42c94234f1b274: !TransformComponent
+                        Id: f5f83751-13a7-4f13-ac9b-26566dcec3b6
+                        Position: {X: 0.0, Y: 0.0, Z: 2.1454048}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: b04e5b3b-fd9c-4ed9-99b2-5aa37963d233
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        FireRate: 0.3
+                        MaxDistance: 100.0
+                        CollideWithGroup: CharacterFilter
+                        CollideWithTriggers: true
+                    589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
+                        Id: ab5eec57-3f04-404f-8504-f587503d2f56
+                        Sounds:
+                            6db19c753898e150f5c5347f361984e4~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 00231250-d9d5-4371-9fdc-b971cdf5363a
+                InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Entity:
+                Id: 89141b9c-4507-4dfc-bb41-3a320d6238e0
+                Name: Sphere
+                Components:
+                    71e5402945af138c13958d028640487c: !TransformComponent
+                        Id: 8f0d8e07-15ee-492c-8f10-f1cea018b283
+                        Position: {X: -7.6578045, Y: 4.6720495, Z: 17.407887}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    31b0527cb6bbfd490d1bca90f9bd6580: !ModelComponent
+                        Id: e4031571-f75b-4c73-a5ce-fef43f123bb7
+                        Model: 2c161168-6f26-4ec8-a29f-4f4008a0ecdc:Models/Sphere
+                        Materials: {}
+                    2cce1147c0887ea13d345a2508ba891e: !RigidbodyComponent
+                        Id: 8dadbe52-8205-4cca-beff-a221b8d40d97
+                        CollisionGroup: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.1
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            aecabbec8ce552e65ee033e9b98838ca: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    2e7bc59fa6a7a9ca5f4fe55561c08ea2: !SandboxSceneBrowser.MoveTowardsPlayerSlowly,SandboxSceneBrowser
+                        Id: 7546fd78-e2c3-46bd-bca2-1b868052b844
+                        FollowForce: 5.0
+        -   Folder: null
+            Entity:
+                Id: 8c3acd0f-cc46-41b4-af21-f0137c0ce5e0
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: fec9e035-d5fc-4dd9-aee7-b606134496e6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: cc21ee39-469e-4dee-aeaf-9c5a34829e48
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
+                InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Entity:
+                Id: a6e02581-4d03-480e-9151-0a8c43996f97
+                Name: Turret
+                Components:
+                    bb666080d8f32da3cf7e48ec31bece74: !TransformComponent
+                        Id: 1e6e4b86-3654-48fe-b8db-bcadf2e1dfd9
+                        Position: {X: -1.5322318, Y: 0.0, Z: 2.429625}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3fac1d24cdbb05eb9d61f7a10549e48f: ref!! 9dcc42b9-ddec-47f8-a07d-34c13735b921
+        -   Folder: null
+            Entity:
+                Id: ae658f36-7597-47ef-9855-287913e2b7c7
+                Name: TurretBase
+                Components:
+                    4f6318bd66ea61831196b2f73e098b73: !TransformComponent
+                        Id: 217be123-b79b-467e-ac41-0311e67a86a2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    da9f41079a9401743ae07088dfcacabf: !ModelComponent
+                        Id: 395e9f25-636f-4fe5-9e84-f65f27a8630d
+                        Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
+                InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
+        -   Folder: null
+            Entity:
+                Id: b7453747-1fc0-4f6d-a358-3e36baaafcc6
+                Name: TurretCannon
+                Components:
+                    0236d343576769856429a90cd1406260: !TransformComponent
+                        Id: 17213de4-f946-4470-a137-0ae2080bb912
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d8f66e0f614bda9b83557d3dce57ec3: !ModelComponent
+                        Id: e6469b84-9b85-4cb6-b5b0-99bb077fa807
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: e92293c6-0002-489d-9818-764fe59a1e26
+                InstanceId: caa0c4fd-43a3-40db-b4fb-8d9df5e188b5
+        -   Folder: null
+            Entity:
+                Id: c268123d-9b94-4b83-9660-5a55e9138765
+                Name: ProjectileSpawnPoint
+                Components:
+                    0fa2f9ef07bd84f153e9e2e390b299e0: !TransformComponent
+                        Id: 55d69f1b-f9e8-47a2-a2ea-00eeb87ba61e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.9171255}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b866d1b8304de92dfe14f2a82cf65d4c: !MiyaGrace.Stride.Common.FireProjectileController,MiyaGrace.Stride.Common
+                        Id: 780ea45f-e305-4672-b6e3-3d995923ecf0
+                        ProjectileSoundControllerKey: laser
+                        ProjectilePrefab: 74a5c74b-b01b-42d1-b335-259b530b572b:Prefabs/BasicLaser
+                        FireButton: Space
+                        FireRate: 0.1
+                    4292ea185aea4c3657c6184d15b28e98: !AudioEmitterComponent
+                        Id: 2fc30748-2f1a-4ebc-9cc6-3bf73a1ca6fd
+                        Sounds:
+                            e107f843289f4adc44cbc60b99cdcb4c~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+        -   Folder: null
+            Entity:
+                Id: caded8ab-baab-4602-a01d-6a628998dd6b
+                Name: CannonRoot
+                Components:
+                    eeb5447be25a14792624211a1c2e37d9: !TransformComponent
+                        Id: 2a458989-2f76-42ee-a26b-ed3b80e6868c
+                        Position: {X: 0.0, Y: 1.8352602, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3d43ec7c6c4dccfd97236cd33aeda06a: ref!! b3f372f8-96c7-4306-a305-3f84fffefad1
+                            71731564af71293dd2ea6be9aedf269e: ref!! f5f83751-13a7-4f13-ac9b-26566dcec3b6
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                        Id: ae6e134c-1946-4048-bc1b-b1618aa54d73
+                        TurnSpeed: 0.1
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
+                InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Folder: null
+            Entity:
+                Id: d1046db5-0672-4529-96b7-9aaf2d25157e
+                Name: ProjectileSpawnPoint
+                Components:
+                    1aece97aa9b503fbbd42c94234f1b274: !TransformComponent
+                        Id: 3442b55a-129d-4c96-95ab-e15c5aac5537
+                        Position: {X: 0.0, Y: 0.0, Z: 2.1454048}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: 5d0fec0c-80d7-4c22-9f47-abc2cd571ffe
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        FireRate: 0.3
+                        MaxDistance: 100.0
+                        CollideWithGroup: CharacterFilter
+                        CollideWithTriggers: true
+                    589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
+                        Id: 18c6fb69-53f8-42d8-95a1-cbf7243d6254
+                        Sounds:
+                            6db19c753898e150f5c5347f361984e4~laser: 0d433897-be6c-4dcc-9418-a6106ce8d6e8:Sounds/laserShoot
+                        UseHRTF: true
+                        DirectionalFactor: 0.0
+                        Environment: Outdoors
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 00231250-d9d5-4371-9fdc-b971cdf5363a
+                InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
+        -   Folder: null
+            Entity:
+                Id: dcda88e7-8500-4e25-9d26-68d37d63bb71
+                Name: CannonRoot
+                Components:
+                    eeb5447be25a14792624211a1c2e37d9: !TransformComponent
+                        Id: e697835f-f7eb-4862-9edc-a4c5600a38be
+                        Position: {X: 0.0, Y: 1.8352602, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3d43ec7c6c4dccfd97236cd33aeda06a: ref!! 08be3b02-e8bc-4f2b-9c1a-670d1d2278fb
+                            71731564af71293dd2ea6be9aedf269e: ref!! 576f7724-d306-4233-842b-949df9524dc2
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                        Id: 13a74bda-22fd-4c7a-923a-372a799858b1
+                        TurnSpeed: 0.1
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
+                InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
+        -   Entity:
+                Id: de951783-e382-4eaf-82d6-ca25443d8724
+                Name: FirstPersonCharacter
+                Components:
+                    fd5fe31447da9fabbd948d362cc0549b: !TransformComponent
+                        Id: 000706f4-8cc6-4f28-9c73-74de6446e983
+                        Position: {X: 0.0, Y: 0.46339566, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0fafbfe787c46317c17813b7107fc8de: ref!! dfe2f761-af7f-46c2-9be6-87d670b90ae8
+                    ee0d3e8cbe87707f928f74934adcac5c: !MiyaGrace.Stride.Common.FirstPersonCamera,MiyaGrace.Stride.Common
+                        Id: 169966a8-8c73-4069-8d5f-754097d86bd1
+                        MouseSpeed: 0.6
+                        MaxLookUpAngle: -50.0
+                        MaxLookDownAngle: 50.0
+                        InvertMouseY: false
+                    33c2459badb06e3355c2a2ae9ec818bb: !CharacterComponent
+                        Id: a5392636-6e43-4b4e-93b1-e21519228761
+                        CollisionGroup: CharacterFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            80ef49f4fb4123527b394595df4fb1b7: !CapsuleColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    30c8613ad82f39925bfb5e032e0e686c: !MiyaGrace.Stride.Common.CharacterMovement,MiyaGrace.Stride.Common
+                        Id: f522aba6-92ba-4846-94fb-87d407957b4a
+                        MovementMultiplier: {X: 3.0, Y: 0.0, Z: 4.0}
+                        RunMultiplier: 5.0
+        -   Folder: null
+            Entity:
+                Id: e4a6ecc3-99af-41bc-b382-f15a113d32cb
+                Name: CannonRoot
+                Components:
+                    eeb5447be25a14792624211a1c2e37d9: !TransformComponent
+                        Id: cc9bdbf0-3d0c-42b7-8876-2205063b0c14
+                        Position: {X: 0.0, Y: 1.8352602, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3d43ec7c6c4dccfd97236cd33aeda06a: ref!! 8783d62c-67e4-47dd-8584-a2f24ef81709
+                            71731564af71293dd2ea6be9aedf269e: ref!! 9e6195d6-c696-437a-8e12-e5a3d9d7e898
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                        Id: 5713939e-5668-4afe-9882-cd6e50df32d9
+                        TurnSpeed: 0.1
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
+                InstanceId: ed138c7c-6b9c-45b5-92c7-3e471cb40660
+        -   Folder: null
+            Entity:
+                Id: e99f9484-bd0b-4520-8140-4149ac036986
+                Name: PrefabRoot
+                Components:
+                    5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
+                        Id: 2193ebef-80d4-40c7-9cea-471c4d95d304
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 217be123-b79b-467e-ac41-0311e67a86a2
+                            5b798ce0603968b062ba9e25598db50d: ref!! 671ebde7-1211-4889-bed9-8a2caca742f7
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                        Id: c3ab2164-329b-4646-8c1b-111349436126
+                        MaxHealth: 10.0
+                        Defense: 0.0
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                        Id: 4d2dafd0-9621-457a-8d7e-8c264663c6bd
+                        SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
+                        PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
+                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
+                        Id: 90fe13c4-2e8d-4040-bbae-92b2d64a47f0
+                        CollisionGroup: CustomFilter3
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
+                InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
+        -   Folder: null
+            Entity:
+                Id: ef4a266d-325d-4b03-bd8c-4345e1ccd34f
+                Name: TurretCannon
+                Components:
+                    0236d343576769856429a90cd1406260: !TransformComponent
+                        Id: 8783d62c-67e4-47dd-8584-a2f24ef81709
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d8f66e0f614bda9b83557d3dce57ec3: !ModelComponent
+                        Id: 77a00f1f-f465-47d4-903f-8a8977a96d2e
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+            Base:
+                BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
+                BasePartId: e92293c6-0002-489d-9818-764fe59a1e26
+                InstanceId: ed138c7c-6b9c-45b5-92c7-3e471cb40660
+        -   Entity:
+                Id: f77a4d96-ba02-4e72-9697-bdca72d13534
+                Name: Turret
+                Components:
+                    bb666080d8f32da3cf7e48ec31bece74: !TransformComponent
+                        Id: 0206e252-f945-42f5-be93-6edd55ab9ee4
+                        Position: {X: -4.5993423, Y: 0.0, Z: 2.429625}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3fac1d24cdbb05eb9d61f7a10549e48f: ref!! 75b70446-4b1b-47ba-b415-22c2656a60c0

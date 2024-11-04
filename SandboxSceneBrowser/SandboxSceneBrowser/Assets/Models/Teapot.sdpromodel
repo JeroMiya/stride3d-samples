@@ -1,0 +1,11 @@
+!ProceduralModelAsset
+Id: 9f4502da-c079-4c04-b1fb-6f7f72602e1b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: !TeapotProceduralModel
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    NumberOfTextureCoordinates: 10
+    MaterialInstance:
+        Material: 940e737d-8888-4704-ae0f-164b9b7a40fe:Sphere Material

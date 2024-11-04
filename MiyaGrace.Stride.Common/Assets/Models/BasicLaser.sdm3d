@@ -1,0 +1,15 @@
+!Model
+Id: 7eb02fb5-784c-4cbc-8da0-11dfdf41215d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file BasicLaser.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    797f65ba6a99ffe0abd06ee52ea94059:
+        Name: Material
+        MaterialInstance:
+            Material: b078acbc-34b6-4640-81ad-078e0b890660:Models/lowspec500
+Modifiers: {}
+~SourceHashes:
+    4744b698d98bed1cbb8fb48790b7ad15~BasicLaser.fbx: 9ca7e3881eca4b2591a3b7b2c08c61dc

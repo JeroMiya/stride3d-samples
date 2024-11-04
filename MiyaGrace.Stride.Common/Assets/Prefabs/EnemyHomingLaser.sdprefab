@@ -1,0 +1,60 @@
+!PrefabAsset
+Id: c6f670a6-3bbf-46bd-a67f-1c73f4205409
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! de79daa1-47eb-4079-8501-1c87cd4f28cf
+    Parts:
+        -   Entity:
+                Id: de79daa1-47eb-4079-8501-1c87cd4f28cf
+                Name: BasicLaser
+                Components:
+                    1e094fca64876357e37c9169a3b43af6: !TransformComponent
+                        Id: 47972e31-806a-4d50-921a-00e54f11ed62
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8d29f9023b4fb95d9b5a93c2c02be668: !ModelComponent
+                        Id: 08b52991-1aa2-4365-9af1-55bb0b1fa51c
+                        Model: 7eb02fb5-784c-4cbc-8da0-11dfdf41215d:Models/BasicLaser
+                        Materials: {}
+                    7e6c91e19b33d60c9e8b26730c8344e7: !RigidbodyComponent
+                        Id: 023bb9a5-6866-47ee-995c-77bd15c54a0b
+                        CollisionGroup: CustomFilter2
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            795b0bc6fc237b2c18e31cc73e95bd8f: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.25, Y: 0.25, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: -0.35}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    1401c91547280b3986cc171607d0acdd: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileHomingMovement,MiyaGrace.Stride.Common
+                        Id: a1e247e3-a6e3-4f05-8788-306a95c1a54d
+                        Target: null
+                        TurnSpeed: 0.1
+                        MovementSpeed: 5.0
+                    0c9512dc5447165967f81c336f102145: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
+                        Id: 7d9fcfcc-d474-4c7f-b537-5ec85ddf2d52
+                        LifetimeSeconds: 10.0
+                        PrefabToSpawnOnDeath: null
+                    97feddba0b5a0c141c0abbf1e2ce65fa: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
+                        Id: cdba6aed-d349-4332-9e52-095a0a9ce46e
+                        DamageAmount: 1.0
+                        SoundToPlayOnDeath: a8f3cc1b-88da-428f-b66a-c46db515467d:Sounds/hitHurt
+                        PrefabToSpawnOnDeath: null

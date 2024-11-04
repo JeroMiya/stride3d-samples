@@ -1,0 +1,37 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiyaGrace.Stride.Common", "..\MiyaGrace.Stride.Common\MiyaGrace.Stride.Common.csproj", "{1549D4F1-6198-4D0B-966C-63B5CC071C04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxSceneBrowser.Windows", "SandboxSceneBrowser.Windows\SandboxSceneBrowser.Windows.csproj", "{0DDC6F1A-39BC-4DC0-BD53-DB32DE834968}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandboxSceneBrowser", "SandboxSceneBrowser\SandboxSceneBrowser.csproj", "{ED720325-0F05-4823-A244-D9C84A1A1993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1549D4F1-6198-4D0B-966C-63B5CC071C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1549D4F1-6198-4D0B-966C-63B5CC071C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1549D4F1-6198-4D0B-966C-63B5CC071C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1549D4F1-6198-4D0B-966C-63B5CC071C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDC6F1A-39BC-4DC0-BD53-DB32DE834968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDC6F1A-39BC-4DC0-BD53-DB32DE834968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDC6F1A-39BC-4DC0-BD53-DB32DE834968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDC6F1A-39BC-4DC0-BD53-DB32DE834968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED720325-0F05-4823-A244-D9C84A1A1993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED720325-0F05-4823-A244-D9C84A1A1993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED720325-0F05-4823-A244-D9C84A1A1993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED720325-0F05-4823-A244-D9C84A1A1993}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC97C3B9-6161-4173-B30C-1C7E7A0F653E}
+	EndGlobalSection
+EndGlobal

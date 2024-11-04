@@ -1,0 +1,42 @@
+!SceneAsset
+Id: 627b7f7f-29bd-44fd-b095-108c576cc254
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! aee0a3df-526a-481c-8386-22ab09f82c42
+        - ref!! 2fed2018-fc59-46e9-8938-34da17659932
+    Parts:
+        -   Entity:
+                Id: 2fed2018-fc59-46e9-8938-34da17659932
+                Name: SceneEntryPoint
+                Components:
+                    33d2f4b72332ac6cbfbe7c0a23b9e1c0: !TransformComponent
+                        Id: f50a9724-2160-4916-b225-3d8a98af840d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    32040906ed3322f585d0f0f9fd9eb0f8: !SandboxSceneBrowser.SceneEntryPoint,SandboxSceneBrowser
+                        Id: d6b3ed30-4e4e-4201-8600-20e74541db2d
+                        MenuScene: b5dbcaf5-3d27-41de-a40d-85e1796ea4e0:Scenes/MainMenu/MainMenuScene
+                        PauseMenuScene: 3a80c0ad-e889-47cb-9e16-a62315c085c4:Scenes/PauseMenu/PauseScene
+                        Level1Scene: 326b6449-df21-4dd4-87c9-00e903f68add:Scenes/Level1/Level1Scene
+                        Camera: ref!! adb344a2-e764-4384-a0b7-5b9357657439
+        -   Entity:
+                Id: aee0a3df-526a-481c-8386-22ab09f82c42
+                Name: MainSceneCamera
+                Components:
+                    ab8c256be6b15340fb1591dfd517ff83: !TransformComponent
+                        Id: 06a0411d-5919-4af2-937d-f68c8f96edf9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2040c96bc8af77bf825a4556a484ac79: !CameraComponent
+                        Id: adb344a2-e764-4384-a0b7-5b9357657439
+                        Name: null
+                        Projection: Perspective
+                        Slot: 02013c70-66b7-42d0-8aa0-3775873b98e5
