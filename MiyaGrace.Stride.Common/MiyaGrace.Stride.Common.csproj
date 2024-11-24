@@ -1,23 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFrameworks>net8.0-windows;net8.0</TargetFrameworks>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Stride.CommunityToolkit" Version="1.0.0-preview.45" />
-		<PackageReference Include="Stride.Engine" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Video" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Physics" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Navigation" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Particles" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.UI" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Core" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" />
-		<PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2232" PrivateAssets="contentfiles;analyzers" IncludeAssets="build" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Assets\" />
-	  <Folder Include="Resources\Textures\" />
-	</ItemGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride.CommunityToolkit" Version="1.0.0-preview.46" />
+    <PackageReference Include="Stride.Engine" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Video" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Core" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2267" PrivateAssets="contentfiles;analyzers" IncludeAssets="build" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Resources\Textures\" />
+  </ItemGroup>
 </Project>
