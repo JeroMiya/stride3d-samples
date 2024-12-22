@@ -11,13 +11,13 @@ public class BetterFlightController : SyncScript
     public float Responsiveness { get; set; } = 200f;
     public float LiftCoefficient { get; set; } = 0.01f;
 
-    RigidbodyComponent rb = null!;
+    BodyComponent rb = null!;
 
     public override void Start()
     {
         base.Start();
-        rb = Entity.Get<RigidbodyComponent>()
-            ?? throw new InvalidOperationException("Could not find RigidbodyComponent on Entity");
+        rb = Entity.Get<BodyComponent>()
+            ?? throw new InvalidOperationException($"Could not find {nameof(BodyComponent)} on {nameof(Entity)}");
     }
 
     public override void Update()
@@ -36,28 +36,28 @@ public class BetterFlightController : SyncScript
         // Debug Text:
 
         // Apply thrust
-        rb.ApplyRelativeForce(relativeForward * MaxThrust * thrustAxis * deltaT);
+        rb.ApplyLinearImpulse(relativeForward * MaxThrust * thrustAxis * deltaT);
 
         // horizontal torque
-        rb.ApplyRelativeTorque(relativeLeft * verticalAxis * Responsiveness * deltaT);
+        rb.ApplyLinearImpulse(relativeLeft * verticalAxis * Responsiveness * deltaT);
 
         // vertical torque
-        rb.ApplyRelativeTorque(relativeForward * horizontalAxis * Responsiveness * deltaT);
+        rb.ApplyLinearImpulse(relativeForward * horizontalAxis * Responsiveness * deltaT);
 
         // rudder
-        rb.ApplyRelativeTorque(relativeUp * -rudderAxis * Responsiveness * deltaT);
+        rb.ApplyLinearImpulse(relativeUp * -rudderAxis * Responsiveness * deltaT);
 
         // drag
         // review note:
         // I believe for arcade style controls, drag force needs to be
         // relative to the angle between linear velocity and the model's
         // forward vector, and also potentially adjusted based on flight controls
-        rb.ApplyForce(rb.LinearVelocity * -DragForce * deltaT);
+        rb.ApplyLinearImpulse(rb.LinearVelocity * -DragForce * deltaT);
 
         // lift
         // review note:
         // this is not how lift force works, even for arcade style controls.
         // needs much more research
-        //rb.ApplyForce(Vector3.UnitY * rb.LinearVelocity.Length() * LiftCoefficient * deltaT);
+        //rb.ApplyLinearImpulse(Vector3.UnitY * rb.LinearVelocity.Length() * LiftCoefficient * deltaT);
     }
 }

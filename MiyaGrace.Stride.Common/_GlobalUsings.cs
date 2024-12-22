@@ -2,7 +2,12 @@
 global using Stride.Input;
 global using Stride.Core;
 global using Stride.Core.Mathematics;
-global using Stride.Physics;
+global using Stride.BepuPhysics;
+global using Stride.BepuPhysics.Components;
+global using Stride.BepuPhysics.Definitions;
+global using Stride.BepuPhysics.Systems;
+global using Stride.BepuPhysics.Constraints;
+global using Stride.BepuPhysics.Assets;
 global using Stride.Engine;
 global using Stride.Games;
 global using Stride.Data;

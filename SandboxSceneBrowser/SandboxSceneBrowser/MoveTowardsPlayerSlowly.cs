@@ -3,7 +3,7 @@
 public class MoveTowardsPlayerSlowly : SyncScript
 {
     Entity mPlayerEntity;
-    RigidbodyComponent mRigidBody;
+    BodyComponent mRigidBody;
 
     public float FollowForce { get; set; } = 5f;
 
@@ -11,7 +11,7 @@ public class MoveTowardsPlayerSlowly : SyncScript
     {
         mPlayerEntity = Entity.Scene.Entities.Where(e => e.Name == "FirstPersonCharacter")
             .FirstOrDefault() ?? throw new InvalidOperationException("Couldn't find player entity");
-        mRigidBody = Entity.Get<RigidbodyComponent>()
+        mRigidBody = Entity.Get<BodyComponent>()
             ?? throw new InvalidOperationException("Missing required RigidBodyComponent");
     }
 

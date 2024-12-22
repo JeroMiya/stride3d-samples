@@ -1,6 +1,4 @@
-﻿using MiyaGrace.Stride.Common.Services;
-
-namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common;
 
 /// <summary>
 /// This script fires a projectile when the attached entity is
@@ -22,6 +20,11 @@ public class FireProjectileWhenPointedAtPlayer : SyncScript
     public required Prefab ProjectilePrefab { get; set; }
 
     /// <summary>
+    /// Maximum number of hit results to process when casting rays.
+    /// </summary>
+    public int RaycastBufferSize { get; set; } = 5;
+
+    /// <summary>
     /// The fire rate of the projectile, in terms of time between fires
     /// in seconds. Example: 2 fires per second = 0.5f;
     /// </summary>
@@ -36,7 +39,7 @@ public class FireProjectileWhenPointedAtPlayer : SyncScript
     /// <summary>
     /// The collision group filter for the raycast.
     /// </summary>
-    public CollisionFilterGroupFlags CollideWithGroup { get; set; }
+    public CollisionMask CollideWithGroup { get; set; } = CollisionMask.Everything;
 
     /// <summary>
     /// Defaults to false - set to true to collide with trigger volumes.
@@ -45,7 +48,7 @@ public class FireProjectileWhenPointedAtPlayer : SyncScript
 
 
     private double mLastFire = 0f;
-    private Simulation simulation = null!;
+    private BepuSimulation simulation = null!;
     private PlayerEntityService? mPlayerEntityService = null!;
     private AudioEmitterComponent mAudioEmitter = null!;
     private AudioEmitterSoundController mLaserSoundController = null!;
@@ -71,12 +74,12 @@ public class FireProjectileWhenPointedAtPlayer : SyncScript
             throw new InvalidOperationException("ProjectilePrefab not set on parent Entity");
         }
 
-        simulation = this.GetSimulation()
+        simulation = Entity.GetSimulation()
             ?? throw new InvalidOperationException(
                 "Couldn't get simulation - is there a physics component in the scene?");
     }
 
-    private readonly List<HitResult> mHitResults = new();
+    private readonly List<HitInfo> mHitResults = new();
     public override void Update()
     {
         if (mPlayerEntityService == null) { return; }
@@ -87,19 +90,15 @@ public class FireProjectileWhenPointedAtPlayer : SyncScript
 
         var raycastStart = Entity.GetWorldPosition();
         var direction = Entity.GetModelWorldForward();
-
         direction.Normalize();
-        var raycastEnd = raycastStart + (direction * MaxDistance);
 
         mHitResults.Clear();
-
-        simulation.RaycastPenetrating(
-            from: raycastStart,
-            to: raycastEnd,
-            resultsOutput: mHitResults,
-            filterGroup: CollisionFilterGroups.AllFilter,
-            filterFlags: CollideWithGroup,
-            hitTriggers: CollideWithTriggers);
+        simulation.RayCastPenetrating(
+            origin: raycastStart,
+            dir: direction,
+            maxDistance: MaxDistance,
+            collection: mHitResults,
+            collisionMask: CollideWithGroup);
 
         if (mHitResults.Count == 0) { return; }
 

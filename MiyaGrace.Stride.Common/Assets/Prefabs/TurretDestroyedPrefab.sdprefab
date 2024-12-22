@@ -20,34 +20,32 @@ Hierarchy:
                         Id: 6f69e251-044a-4b12-8052-c5d5e9649f7e
                         Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
                         Materials: {}
-                    5abef10b23dfea06b4497cb0b5a7785e: !RigidbodyComponent
-                        Id: 4ed79468-a911-4a5c-bedd-021ece4ecab1
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 1.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            32d2fac279964d13b33d592932e75266: !CylinderColliderShapeDesc
-                                Height: 3.0
-                                Radius: 0.1
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 1.0}
-                                LocalRotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                     005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
                         Id: 8236913d-a245-4b37-9731-4b025fa414a9
                         MinimumImpulseForce: 0.0
                         MaximumImpulseForce: 20.0
+                    e24073c341bd3f933cf6da5fc36eb693: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 6f840ab2-81e4-40a3-8178-a44da981e6f1
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                f28e75bf638416651d7087f5b629f66d: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                    RotationLocal: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                                    Radius: 0.1
+                                    Length: 3.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 0.5
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Entity:
                 Id: 92f8f8a9-d7f4-474d-9e6e-b7866e9c59fd
                 Name: TurretBase
@@ -62,34 +60,32 @@ Hierarchy:
                         Id: b594dd82-1b84-45eb-ba5a-af5776256a54
                         Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
                         Materials: {}
-                    7bd394e6a4a8cf58b548edc548eec42c: !RigidbodyComponent
-                        Id: 86ce799d-79ff-4e58-bee9-88a891651636
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 1.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            919d5fa9ef715bcc338be103646d3407: !CylinderColliderShapeDesc
-                                Height: 2.5
-                                Radius: 1.0
-                                LocalOffset: {X: 0.0, Y: 1.25, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     84114f4af4bce92371be16321e458b6b: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
                         Id: 4475bada-a4ec-4382-9a5f-dd2e2730a2e3
                         MinimumImpulseForce: 0.0
                         MaximumImpulseForce: 20.0
+                    0702bf69dbe15e2878ad541676ddf795: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: a37bd34d-debd-447c-adc4-919452604ec1
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7f916ccedaeff8e35197d414bc4af109: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.25, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 1.0
+                                    Length: 2.5
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 0.5
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Entity:
                 Id: 930c941c-1175-4c71-895b-4614514eb2b6
                 Name: InitialExplosionParticles

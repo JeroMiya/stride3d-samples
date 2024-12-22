@@ -1,4 +1,6 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿using Stride.BepuPhysics.Definitions.Colliders;
+
+namespace MiyaGrace.Stride.Common;
 
 /// <summary>
 /// Very broken and cursed first attempt at a flight script
@@ -25,7 +27,7 @@ public class FlightScript : SyncScript
 
     public float Lift { get; set; } = 135f;
 
-    private RigidbodyComponent mRigidBody = null!;
+    private BodyComponent mRigidBody = null!;
 
     private float mThrottle;
     private float mRoll;
@@ -36,15 +38,23 @@ public class FlightScript : SyncScript
     {
         get
         {
-            return mRigidBody.Mass / 10f * Responsiveness;
+            var collider = mRigidBody.Collider;
+            var mass = collider switch
+            {
+                CompoundCollider compoundCollider => compoundCollider.Colliders.Sum(collider => collider.Mass),
+                EmptyCollider emptyCollider => 1.0f,
+                _ => throw new InvalidOperationException($"Unknown collider type {collider.GetType()}")
+            };
+
+            return mass / 10f * Responsiveness;
         }
     }
 
     public override void Start()
     {
         base.Start();
-        mRigidBody = Entity.Get<RigidbodyComponent>()
-            ?? throw new InvalidOperationException("Could not find RigidBodyComponent"); ;
+        mRigidBody = Entity.Get<BodyComponent>()
+            ?? throw new InvalidOperationException($"Could not find {nameof(BodyComponent)}"); ;
 
     }
 
@@ -53,12 +63,12 @@ public class FlightScript : SyncScript
         if (Input.HasGamePad)
         {
             HandleInputs(Input.DefaultGamePad.State);
-
-            mRigidBody.ApplyForce(GetForward() * MaxThrust * mThrottle);
-            mRigidBody.ApplyTorque(GetUp() * mYaw * ResponseModifier);
-            mRigidBody.ApplyTorque(GetRight() * mPitch * ResponseModifier);
-            mRigidBody.ApplyTorque(GetBackward() * mRoll * ResponseModifier);
-            mRigidBody.ApplyForce(Vector3.UnitY * mRigidBody.LinearVelocity.Length() * Lift);
+            var deltaT = (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            mRigidBody.ApplyLinearImpulse(GetForward() * MaxThrust * mThrottle * deltaT);
+            mRigidBody.ApplyAngularImpulse(GetUp() * mYaw * ResponseModifier * deltaT);
+            mRigidBody.ApplyAngularImpulse(GetRight() * mPitch * ResponseModifier * deltaT);
+            mRigidBody.ApplyAngularImpulse(GetBackward() * mRoll * ResponseModifier * deltaT);
+            mRigidBody.ApplyLinearImpulse(Vector3.UnitY * mRigidBody.LinearVelocity.Length() * Lift * deltaT);
         }
     }
 

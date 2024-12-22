@@ -32,7 +32,7 @@ public partial class WorldSpaceTarget : SyncScript
     /// Set this to the collision groups you want the raycast to use
     /// when detecting a collision in the environment.
     /// </summary>
-    public CollisionFilterGroupFlags CollideWithGroup { get; set; }
+    public CollisionMask CollideWithGroup { get; set; }
 
     /// <summary>
     /// Defaults to false - set to true to have the collision test also
@@ -40,13 +40,13 @@ public partial class WorldSpaceTarget : SyncScript
     /// </summary>
     public bool CollideWithTriggers { get; set; } = false;
 
-    private Simulation simulation = null!;
+    private BepuSimulation simulation = null!;
 
     public override void Start()
     {
         if (SourceEntity == null) { throw new InvalidOperationException("SourceEntity is required to be set"); }
 
-        simulation = this.GetSimulation()
+        simulation = Entity.GetSimulation()
             ?? throw new InvalidOperationException(
                 "Couldn't get simulation - is there a physics component attached?");
     }
@@ -64,7 +64,12 @@ public partial class WorldSpaceTarget : SyncScript
         int drawY = 80;
 
         // Send a raycast from the start to the endposition
-        if (simulation.Raycast(raycastStart, raycastEnd, out HitResult hitResult, CollisionFilterGroups.DefaultFilter, CollideWithGroup, CollideWithTriggers))
+        if (simulation.RayCast(
+            origin: raycastStart,
+            dir: direction,
+            maxDistance: MaxDistance,
+            out HitInfo hitResult,
+            CollideWithGroup))
         {
             // If we hit something, calculate the distance to the hitpoint and scale the laser to that distance
             var towardsSource = SourceEntity.Transform.WorldMatrix.TranslationVector
@@ -78,8 +83,8 @@ public partial class WorldSpaceTarget : SyncScript
             // TODO: need to manage debug text in a better way globally, maybe a service that
             // manages enabled/disabled state of debug text?
             DebugText.Print("Hit a collider", new Int2(drawX, drawY));
-            DebugText.Print($"Raycast hit distance: {distance}", new Int2(drawX, drawY + 20));
-            DebugText.Print($"Raycast hit entity: {hitResult.Collider.Entity.Name}", new Int2(drawX, drawY + 60));
+            DebugText.Print($"RayCast hit distance: {distance}", new Int2(drawX, drawY + 20));
+            DebugText.Print($"RayCast hit entity: {hitResult.Collidable.Entity.Name}", new Int2(drawX, drawY + 60));
         }
         else
         {

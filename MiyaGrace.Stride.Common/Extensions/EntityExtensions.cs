@@ -153,11 +153,11 @@ public static class EntityExtensions
     /// <summary>
     /// Get the entity in the Collision that is not the target entity.
     /// </summary>
-    public static PhysicsComponent GetOtherEntityColliderInCollision(this Entity entity, Collision collision)
-    {
-        return Object.ReferenceEquals(entity, collision.ColliderA.Entity)
-            ? collision.ColliderB : collision.ColliderA;
-    }
+    //public static PhysicsComponent GetOtherEntityColliderInCollision(this Entity entity, Collision collision)
+    //{
+    //    return Object.ReferenceEquals(entity, collision.ColliderA.Entity)
+    //        ? collision.ColliderB : collision.ColliderA;
+    //}
 
     /// <summary>
     /// Play a 3D sound in the position of an entity
@@ -174,7 +174,7 @@ public static class EntityExtensions
         audioEmitter.Position = entity.Transform.WorldMatrix.TranslationVector;
         if(applyEntityVelocity)
         {
-            var rigidBody = entity.Get<RigidbodyComponent>();
+            var rigidBody = entity.Get<BodyComponent>();
             if(rigidBody != null)
             {
                 audioEmitter.Velocity = rigidBody.LinearVelocity;

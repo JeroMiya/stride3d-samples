@@ -1,10 +1,12 @@
-﻿namespace MiyaGrace.Stride.Common.ProjectileScripts;
+﻿using BepuPhysics.Collidables;
+
+namespace MiyaGrace.Stride.Common.ProjectileScripts;
 
 /// <summary>
 /// Simple script to remove an entity from the scene
 /// when it colides with something. Also handles doing
 /// damage to things with HealthComponents and optionally plays a
-/// sound when the hit happens. Requires a RigidbodyComponent
+/// sound when the hit happens. Requires a BodyComponent
 /// to be attached to the same entity.
 /// </summary>
 public class ProjectileDieOnCollide : SyncScript
@@ -26,17 +28,25 @@ public class ProjectileDieOnCollide : SyncScript
     /// </summary>
     public Prefab? PrefabToSpawnOnDeath { get; set; }
 
-    private RigidbodyComponent mCollider = null!;
+    private BodyComponent mCollider = null!;
 
     public override void Start()
     {
-        mCollider = Entity.Get<RigidbodyComponent>()
-            ?? throw new InvalidOperationException("Couldn't find a RigidbodyComponent");
+        mCollider = Entity.Get<BodyComponent>()
+            ?? throw new InvalidOperationException("Couldn't find a BodyComponent");
     }
 
     public override void Update()
     {
-        if (mCollider.Collisions.Count > 0)
+        var simulation = mCollider.Simulation;
+        if (simulation == null) { return; }
+
+        if(simulation.SweepCast(
+            shape: new Box(0.25f, 0.25f, 0.25f),
+            pose: new RigidPose(mCollider.Position, mCollider.Orientation),
+            velocity: new BodyVelocity(mCollider.LinearVelocity, Vector3.Zero),
+            maxDistance: 1.0f,
+            out HitInfo result))
         {
             foreach (var collision in mCollider.Collisions)
             {

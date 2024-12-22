@@ -65,24 +65,21 @@ Hierarchy:
                         Id: c3672cff-80db-4ad3-9b86-3314f131433f
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: 7b46f94d-a9e7-4f3a-92d7-0cb4e7701114
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: ee5043a0-6ea5-4544-9385-84f4e7ab9359
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
         -   Entity:
                 Id: 9d92d1e3-32e2-4182-9a06-843f2992b67d
                 Name: CannonRoot

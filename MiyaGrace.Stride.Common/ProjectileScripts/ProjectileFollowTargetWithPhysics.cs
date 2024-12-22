@@ -19,11 +19,11 @@ public class ProjectileFollowTargetWithPhysics : SyncScript
     public float FollowForce { get; set; } = 5f;
 
     private Entity mFollowTarget = null!;
-    private RigidbodyComponent mRigidBody = null!;
+    private BodyComponent mRigidBody = null!;
 
     public override void Start()
     {
-        mRigidBody = Entity.Get<RigidbodyComponent>()
+        mRigidBody = Entity.Get<BodyComponent>()
             ?? throw new InvalidOperationException("Could not find RigidBodyComponent");
 
         if (string.IsNullOrEmpty(FollowTargetName))
@@ -41,6 +41,6 @@ public class ProjectileFollowTargetWithPhysics : SyncScript
             - Entity.Transform.WorldMatrix.TranslationVector;
         thisToTarget.Normalize();
         thisToTarget *= FollowForce;
-        mRigidBody.ApplyForce(thisToTarget);
+        mRigidBody.ApplyLinearImpulse(thisToTarget * (float)Game.UpdateTime.Elapsed.TotalSeconds);
     }
 }

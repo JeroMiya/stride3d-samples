@@ -1,7 +1,7 @@
 ﻿namespace MiyaGrace.Stride.Common;
 
 /// <summary>
-/// If the attached entity has a RigidbodyComponent, this script will
+/// If the attached entity has a BodyComponent, this script will
 /// apply a random impulse in a random direction on startup.
 /// </summary>
 public class RandomImpulseOnStartup : StartupScript
@@ -22,7 +22,7 @@ public class RandomImpulseOnStartup : StartupScript
 
     public override void Start()
     {
-        var rb = Entity.Get<RigidbodyComponent>();
+        var rb = Entity.Get<BodyComponent>();
         if(rb != null)
         {
             var magnitude = MaximumImpulseForce - MinimumImpulseForce;
@@ -34,7 +34,7 @@ public class RandomImpulseOnStartup : StartupScript
                 Random.Shared.NextSingle() * 2 - 1);
             randomDirection.Normalize();
             randomDirection *= Random.Shared.NextSingle() * magnitude + MinimumImpulseForce;
-            rb.ApplyImpulse(randomDirection);
+            rb.ApplyLinearImpulse(randomDirection);
         }
     }
 }

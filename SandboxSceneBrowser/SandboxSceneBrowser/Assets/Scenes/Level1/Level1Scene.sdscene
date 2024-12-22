@@ -9,7 +9,6 @@ Hierarchy:
         - ref!! 65be1f30-4316-4e09-bfe5-a5953c35e83f
         - ref!! 3112acd0-8d8d-4842-b206-2a315b26c34a
         - ref!! 04c607ba-a8c8-4c2e-bc8d-d6ce8921769f
-        - ref!! de951783-e382-4eaf-82d6-ca25443d8724
         - ref!! 53b3b12c-c56b-4980-a784-1eb4c3fa68ff
         - ref!! 18ad4b1d-1e1d-49b1-9c6e-fb72a6170ce5
         - ref!! a6e02581-4d03-480e-9151-0a8c43996f97
@@ -17,6 +16,7 @@ Hierarchy:
         - ref!! 510be402-f6ea-47d1-8980-d9e0b4a2bee7
         - ref!! 344f6b35-fb00-4c62-97ba-aa798809e810
         - ref!! 89141b9c-4507-4dfc-bb41-3a320d6238e0
+        - ref!! 8e86f51c-8ce6-4905-870e-3f7edef84750
     Parts:
         -   Entity:
                 Id: 04c607ba-a8c8-4c2e-bc8d-d6ce8921769f
@@ -32,20 +32,18 @@ Hierarchy:
                         Id: 83650884-05bf-422a-b776-cbda54c243fa
                         Model: 776785fe-a5e0-4841-a0d3-c3d2cebc8882:Ground
                         Materials: {}
-                    d9824877842ecb4a3ce05ac749132ff1: !StaticColliderComponent
-                        Id: 0244c24a-e04f-4d80-95a3-76ea6a386893
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            00ddaf50ff54531aa30685f1eb97da0f: !StaticPlaneColliderShapeDesc
-                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
-                                Offset: 0.0
+                    b4dd890053cd20f017e4873b40c1fd56: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 503b593e-0152-45d1-8708-fb3abf43d8b6
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.MeshCollider,Stride.BepuPhysics
+                            Model: 776785fe-a5e0-4841-a0d3-c3d2cebc8882:Ground
+                            Mass: 1.0
+                            Closed: true
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
         -   Folder: null
             Entity:
                 Id: 1135786c-0f97-4b2d-bcee-89e07b2f4c4b
@@ -97,24 +95,21 @@ Hierarchy:
                         Id: d4d16dd1-481a-49d5-b1f1-0ca859317bfc
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: 5cdd1c3f-c9ab-414c-9fb8-3bac188c51b4
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 25fd8d99-826e-49c4-8d8e-df6012b3ea2c
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
             Base:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
@@ -178,24 +173,21 @@ Hierarchy:
                         Id: a2d8db7c-f090-4224-9a9c-62774ba12930
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: 34030f3f-c3ed-41c4-ae43-d3ea6cf75501
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 8f7b4db1-39e9-4421-b2a4-5d175ee2b0d6
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
             Base:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
@@ -288,24 +280,21 @@ Hierarchy:
                         Id: 5a918f83-03e4-41f1-9464-a4ea3947749a
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: ab553410-31e7-45b7-8c2a-286820db2c2a
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: c57455cd-3197-4a22-bc5f-3ffc5cfbbaa9
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
             Base:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
@@ -528,24 +517,21 @@ Hierarchy:
                         Id: ad1aedf3-f24a-4a1a-8eac-037d460cb8b0
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: 19fde4f2-2e1f-4769-857c-28695748a617
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: e7733ee3-0231-498b-be80-dd444876ccb4
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
             Base:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507
@@ -570,8 +556,7 @@ Hierarchy:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
                 InstanceId: 7ced1b6a-d801-4cc9-bd67-7cca978a28db
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 74bdb857-02e0-43f2-a14b-d5d64291e7bc
                 Name: CameraPivot
                 Components:
@@ -627,30 +612,30 @@ Hierarchy:
                         Id: e4031571-f75b-4c73-a5ce-fef43f123bb7
                         Model: 2c161168-6f26-4ec8-a29f-4f4008a0ecdc:Models/Sphere
                         Materials: {}
-                    2cce1147c0887ea13d345a2508ba891e: !RigidbodyComponent
-                        Id: 8dadbe52-8205-4cca-beff-a221b8d40d97
-                        CollisionGroup: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.1
-                        RollingFriction: 0.1
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 1.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.1
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            aecabbec8ce552e65ee033e9b98838ca: !SphereColliderShapeDesc
-                                Is2D: false
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     2e7bc59fa6a7a9ca5f4fe55561c08ea2: !SandboxSceneBrowser.MoveTowardsPlayerSlowly,SandboxSceneBrowser
                         Id: 7546fd78-e2c3-46bd-bca2-1b868052b844
                         FollowForce: 5.0
+                    45d4df639c72d42f9c863f869f9ae414: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: e18097b0-6f00-4c32-8f14-4caed4152259
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4d10f2acae9988066d9c78637d65e2a1: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.5
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Folder: null
             Entity:
                 Id: 8c3acd0f-cc46-41b4-af21-f0137c0ce5e0
@@ -670,6 +655,51 @@ Hierarchy:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 2a704a67-822d-4886-abb0-1bc1d476357f
                 InstanceId: a1dbe6da-8369-47e5-8f20-a0ef63952672
+        -   Entity:
+                Id: 8e86f51c-8ce6-4905-870e-3f7edef84750
+                Name: FirstPersonCharacter2
+                Components:
+                    46333da18373862ea4d9568044e4e9dd: !TransformComponent
+                        Id: 779a8fdf-8dd3-4b92-8ece-8fdf43084946
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3775ea11b964950d845fa686dcfb13d5: ref!! dfe2f761-af7f-46c2-9be6-87d670b90ae8
+                    6a14d4bb98425b7ab0c5d05616206bbe: !Stride.BepuPhysics.CharacterComponent,Stride.BepuPhysics
+                        Id: a93ac8ed-b263-484e-bdeb-d28f7082fdc1
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                5a2d8c833b841d4c4b53c5bb6e12f92e: !Stride.BepuPhysics.Definitions.Colliders.CapsuleCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.35
+                                    Length: 0.5
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                        Speed: 10.0
+                        JumpForce: 10.0
+                    36f4ac690b609e422ab07f3afe04bf7b: !MiyaGrace.Stride.Common.CharacterMovement,MiyaGrace.Stride.Common
+                        Id: 9ec25fff-9cfa-46f3-b570-6f598dbe365e
+                        MovementMultiplier: {X: 3.0, Y: 0.0, Z: 4.0}
+                        RunMultiplier: 5.0
+                    b066e130ff7e02be58c5f49f0eaad7aa: !MiyaGrace.Stride.Common.FirstPersonCamera,MiyaGrace.Stride.Common
+                        Id: 699cbf65-87ac-4933-b091-e8252eaddcdd
+                        MouseSpeed: 0.6
+                        MaxLookUpAngle: -50.0
+                        MaxLookDownAngle: 50.0
+                        InvertMouseY: false
         -   Entity:
                 Id: a6e02581-4d03-480e-9151-0a8c43996f97
                 Name: Turret
@@ -813,44 +843,6 @@ Hierarchy:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 9d92d1e3-32e2-4182-9a06-843f2992b67d
                 InstanceId: 10631068-c1a3-41aa-89d5-9cbcfe07da1b
-        -   Entity:
-                Id: de951783-e382-4eaf-82d6-ca25443d8724
-                Name: FirstPersonCharacter
-                Components:
-                    fd5fe31447da9fabbd948d362cc0549b: !TransformComponent
-                        Id: 000706f4-8cc6-4f28-9c73-74de6446e983
-                        Position: {X: 0.0, Y: 0.46339566, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            0fafbfe787c46317c17813b7107fc8de: ref!! dfe2f761-af7f-46c2-9be6-87d670b90ae8
-                    ee0d3e8cbe87707f928f74934adcac5c: !MiyaGrace.Stride.Common.FirstPersonCamera,MiyaGrace.Stride.Common
-                        Id: 169966a8-8c73-4069-8d5f-754097d86bd1
-                        MouseSpeed: 0.6
-                        MaxLookUpAngle: -50.0
-                        MaxLookDownAngle: 50.0
-                        InvertMouseY: false
-                    33c2459badb06e3355c2a2ae9ec818bb: !CharacterComponent
-                        Id: a5392636-6e43-4b4e-93b1-e21519228761
-                        CollisionGroup: CharacterFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        FallSpeed: 10.0
-                        MaxSlope: {Radians: 0.7853982}
-                        JumpSpeed: 5.0
-                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
-                        ColliderShapes:
-                            80ef49f4fb4123527b394595df4fb1b7: !CapsuleColliderShapeDesc
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    30c8613ad82f39925bfb5e032e0e686c: !MiyaGrace.Stride.Common.CharacterMovement,MiyaGrace.Stride.Common
-                        Id: f522aba6-92ba-4846-94fb-87d407957b4a
-                        MovementMultiplier: {X: 3.0, Y: 0.0, Z: 4.0}
-                        RunMultiplier: 5.0
         -   Folder: null
             Entity:
                 Id: e4a6ecc3-99af-41bc-b382-f15a113d32cb
@@ -892,24 +884,21 @@ Hierarchy:
                         Id: 4d2dafd0-9621-457a-8d7e-8c264663c6bd
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 8229672f-ccd7-47f8-8668-883856709f61:Prefabs/TurretDestroyedPrefab
-                    7c104a66821f83fee299cf0814a01db3: !StaticColliderComponent
-                        Id: 90fe13c4-2e8d-4040-bbae-92b2d64a47f0
-                        CollisionGroup: CustomFilter3
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            94e445ff7e8bd17ebf0221104b481fed: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 2.0, Y: 2.5, Z: 2.0}
-                                LocalOffset: {X: 0.0, Y: 1.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    b0abd937195df6ac3e4aa4c067d81530: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: bb5fb369-325f-49ac-ae75-ca49f95cfd0c
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                71da25df0f3c75fb6c79c5a6b3f47098: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 2.5, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
             Base:
                 BasePartAsset: 02f3d588-157d-4987-a977-a5b6fdf968ce:Prefabs/Turret
                 BasePartId: 66e5cf01-5b4d-44ce-8317-1e331bc22507

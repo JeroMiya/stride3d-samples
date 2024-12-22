@@ -25,7 +25,7 @@ public class CharacterMovement : SyncScript
     public override void Start()
     {
         character = Entity.Get<CharacterComponent>()
-            ?? throw new InvalidOperationException("Couldn't find CharacterComponent on entity");
+            ?? throw new InvalidOperationException($"Couldn't find {nameof(CharacterComponent)} on entity");
     }
 
     public override void Update()
@@ -56,6 +56,6 @@ public class CharacterMovement : SyncScript
             velocity *= RunMultiplier;
         }
         velocity = Vector3.Transform(velocity, Entity.Transform.Rotation);
-        character.SetVelocity(velocity);
+        character.Velocity = velocity;
     }
 }
