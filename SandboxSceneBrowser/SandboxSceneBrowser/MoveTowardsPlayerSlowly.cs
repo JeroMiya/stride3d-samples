@@ -19,6 +19,6 @@ public class MoveTowardsPlayerSlowly : SyncScript
     {
         var direction = mPlayerEntity.GetWorldPosition() - Entity.GetWorldPosition();
         direction.Normalize();
-        mRigidBody.ApplyForce(direction * FollowForce);
+        mRigidBody.ApplyLinearImpulse(direction * FollowForce * (float)Game.UpdateTime.Elapsed.TotalSeconds);
     }
 }

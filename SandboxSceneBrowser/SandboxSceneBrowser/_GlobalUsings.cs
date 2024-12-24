@@ -2,7 +2,6 @@
 global using Stride.Input;
 global using Stride.Core;
 global using Stride.Core.Mathematics;
-global using Stride.Physics;
 global using Stride.Engine;
 global using Stride.Games;
 global using Stride.Data;
@@ -25,4 +24,5 @@ global using Stride.Extensions;
 global using MiyaGrace.Stride.Common.Extensions;
 global using Stride.Engine.Events;
 global using Stride.Core.Serialization;
+global using Stride.BepuPhysics;
 global using SandboxSceneBrowser.Services;

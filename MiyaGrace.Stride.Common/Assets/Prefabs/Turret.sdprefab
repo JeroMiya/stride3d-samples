@@ -16,14 +16,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    9d068cc8fc7b5e16caa8a545841d9986: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
-                        Id: 815b74fe-3433-4302-829c-d6904e994b4b
-                        ProjectileSoundEmitterControllerKey: laser
-                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
-                        FireRate: 0.3
-                        MaxDistance: 100.0
-                        CollideWithGroup: CharacterFilter
-                        CollideWithTriggers: true
                     589cb7c90e20b239400faab25c1edc64: !AudioEmitterComponent
                         Id: b678a5dd-a441-4343-83e5-4316f6f00ad1
                         Sounds:
@@ -31,6 +23,15 @@ Hierarchy:
                         UseHRTF: true
                         DirectionalFactor: 0.0
                         Environment: Outdoors
+                    343f37d64503431272b0e4c5ea199be8: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                        Id: 82ca87e2-e4dc-40b7-b829-33f3d59a5acc
+                        ProjectileSoundEmitterControllerKey: laser
+                        ProjectilePrefab: c6f670a6-3bbf-46bd-a67f-1c73f4205409:Prefabs/EnemyHomingLaser
+                        RaycastBufferSize: 5
+                        FireRate: 0.5
+                        MaxDistance: 100.0
+                        CollideWithGroup: Everything
+                        CollideWithTriggers: false
         -   Entity:
                 Id: 2a704a67-822d-4886-abb0-1bc1d476357f
                 Name: TurretBase

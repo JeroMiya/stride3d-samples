@@ -1,5 +1,7 @@
 ﻿using BepuPhysics.Collidables;
 
+using Stride.BepuPhysics.Definitions.Contacts;
+
 namespace MiyaGrace.Stride.Common.ProjectileScripts;
 
 /// <summary>
@@ -9,7 +11,7 @@ namespace MiyaGrace.Stride.Common.ProjectileScripts;
 /// sound when the hit happens. Requires a BodyComponent
 /// to be attached to the same entity.
 /// </summary>
-public class ProjectileDieOnCollide : SyncScript
+public class ProjectileDieOnCollide : SyncScript, IContactEventHandler
 {
     /// <summary>
     /// If the entity collides with an entity that has a HealthComponent
@@ -28,42 +30,32 @@ public class ProjectileDieOnCollide : SyncScript
     /// </summary>
     public Prefab? PrefabToSpawnOnDeath { get; set; }
 
-    private BodyComponent mCollider = null!;
-
-    public override void Start()
-    {
-        mCollider = Entity.Get<BodyComponent>()
-            ?? throw new InvalidOperationException("Couldn't find a BodyComponent");
-    }
+    public bool NoContactResponse => true;
 
     public override void Update()
     {
-        var simulation = mCollider.Simulation;
-        if (simulation == null) { return; }
+        
+    }
 
-        if(simulation.SweepCast(
-            shape: new Box(0.25f, 0.25f, 0.25f),
-            pose: new RigidPose(mCollider.Position, mCollider.Orientation),
-            velocity: new BodyVelocity(mCollider.LinearVelocity, Vector3.Zero),
-            maxDistance: 1.0f,
-            out HitInfo result))
+    void IContactEventHandler.OnStartedTouching<TManifold>(
+        CollidableComponent eventSource,
+        CollidableComponent other,
+        ref TManifold contactManifold,
+        bool flippedManifold,
+        int workerIndex,
+        BepuSimulation bepuSimulation)
+    {
+        // When something enters inside this object
+        var healthComponent = other.Entity.Get<HealthComponent>();
+        healthComponent?.DoDamage(DamageAmount);
+
+        PrefabToSpawnOnDeath?.InstantiateInSceneAtEntity(Entity);
+
+        if (SoundToPlayOnDeath != null)
         {
-            foreach (var collision in mCollider.Collisions)
-            {
-                var otherEntity = Entity
-                    .GetOtherEntityColliderInCollision(collision).Entity;
-                var healthComponent = otherEntity.Get<HealthComponent>();
-                healthComponent?.DoDamage(DamageAmount);
-            }
-
-            PrefabToSpawnOnDeath?.InstantiateInSceneAtEntity(Entity);
-            
-            if(SoundToPlayOnDeath != null)
-            {
-                Entity.Play3DSoundAtEntity(SoundToPlayOnDeath);
-            }
-
-            Entity.Scene = null;
+            Entity.Play3DSoundAtEntity(SoundToPlayOnDeath);
         }
+
+        Entity.Scene = null;
     }
 }

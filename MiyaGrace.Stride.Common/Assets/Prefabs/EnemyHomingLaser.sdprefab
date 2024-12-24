@@ -48,7 +48,7 @@ Hierarchy:
                         FrictionCoefficient: 0.5
                         MaximumRecoveryVelocity: 1000.0
                         CollisionGroup: {}
-                        ContactEventHandler: null
+                        ContactEventHandler: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! cdba6aed-d349-4332-9e52-095a0a9ce46e
                         Kinematic: true
                         Gravity: false
                         InterpolationMode: None
