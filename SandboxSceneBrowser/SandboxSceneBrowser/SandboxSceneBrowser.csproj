@@ -4,14 +4,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Stride.BepuPhysics" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Engine" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Video" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Physics" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Navigation" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Particles" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.UI" Version="4.2.0.2282" />
-    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2282" IncludeAssets="build;buildTransitive" />
+	<PackageReference Include="Stride.BepuPhysics" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Engine" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Video" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2381" IncludeAssets="build;buildTransitive" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MiyaGrace.Stride.Common\MiyaGrace.Stride.Common.csproj" />

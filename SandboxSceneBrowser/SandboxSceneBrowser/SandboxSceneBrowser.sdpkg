@@ -9,6 +9,8 @@ Meta:
 AssetFolders:
     -   Path: !dir Assets
     -   Path: !dir Effects
+    -   Path: !dir Assets
+    -   Path: !dir C:/Users/bellj/source/repos/stride3d-samples/SandboxSceneBrowser/SandboxSceneBrowser/Assets
 ResourceFolders:
     - !dir Resources
 OutputGroupDirectories: {}

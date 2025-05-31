@@ -7,14 +7,14 @@
   <ItemGroup>
     <PackageReference Include="Stride.BepuPhysics" Version="4.2.0.2282" />
     <PackageReference Include="Stride.CommunityToolkit" Version="1.0.0-preview.46" />
-    <PackageReference Include="Stride.Engine" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Video" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Physics" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Navigation" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Particles" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.UI" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Core" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" />
-    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2282" PrivateAssets="contentfiles;analyzers" IncludeAssets="build" />
+    <PackageReference Include="Stride.Engine" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Video" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Core" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2381" PrivateAssets="contentfiles;analyzers" IncludeAssets="build" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />

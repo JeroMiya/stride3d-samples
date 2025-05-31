@@ -8,6 +8,8 @@ Meta:
     Dependencies: null
 AssetFolders:
     -   Path: !dir Assets
+    -   Path: !dir Assets
+    -   Path: !dir C:/Users/bellj/source/repos/stride3d-samples/MiyaGrace.Stride.Common/Assets
 ResourceFolders:
     - !dir Resources
 OutputGroupDirectories: {}
