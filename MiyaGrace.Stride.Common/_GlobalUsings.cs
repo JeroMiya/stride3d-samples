@@ -7,7 +7,6 @@ global using Stride.BepuPhysics.Components;
 global using Stride.BepuPhysics.Definitions;
 global using Stride.BepuPhysics.Systems;
 global using Stride.BepuPhysics.Constraints;
-global using Stride.BepuPhysics.Assets;
 global using Stride.Engine;
 global using Stride.Games;
 global using Stride.Data;
