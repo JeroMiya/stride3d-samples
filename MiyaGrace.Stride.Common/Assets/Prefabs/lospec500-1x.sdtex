@@ -1,0 +1,11 @@
+!Texture
+Id: e908d6a1-96c2-44e9-a586-87f94aa5a554
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Models/lospec500-1x.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false
+GenerateMipmaps: false
+IsStreamable: false

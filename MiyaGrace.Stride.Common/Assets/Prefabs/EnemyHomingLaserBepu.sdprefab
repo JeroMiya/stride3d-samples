@@ -1,57 +1,58 @@
 !PrefabAsset
-Id: c6f670a6-3bbf-46bd-a67f-1c73f4205409
+Id: 723a56d0-f525-4ffb-902d-eeb0c6d08448
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! de79daa1-47eb-4079-8501-1c87cd4f28cf
+        - ref!! b39e948e-d370-42bc-b5c1-473e23974b30
     Parts:
         -   Entity:
-                Id: de79daa1-47eb-4079-8501-1c87cd4f28cf
+                Id: b39e948e-d370-42bc-b5c1-473e23974b30
                 Name: BasicLaser
                 Components:
                     1e094fca64876357e37c9169a3b43af6: !TransformComponent
-                        Id: 47972e31-806a-4d50-921a-00e54f11ed62
+                        Id: 65c978f7-66e2-4287-b1e2-b183fd6990af
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8d29f9023b4fb95d9b5a93c2c02be668: !ModelComponent
-                        Id: 08b52991-1aa2-4365-9af1-55bb0b1fa51c
+                        Id: 35a9bdb0-5f3e-4209-b2c3-019e50e1636c
                         Model: 7eb02fb5-784c-4cbc-8da0-11dfdf41215d:Models/BasicLaser
                         Materials: {}
                     1401c91547280b3986cc171607d0acdd: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileHomingMovement,MiyaGrace.Stride.Common
-                        Id: a1e247e3-a6e3-4f05-8788-306a95c1a54d
+                        Id: 152da5ba-2343-46d0-ae1e-10ba7e7c76da
                         Target: null
                         TurnSpeed: 0.1
                         MovementSpeed: 5.0
                     0c9512dc5447165967f81c336f102145: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
-                        Id: 7d9fcfcc-d474-4c7f-b537-5ec85ddf2d52
+                        Id: b2795d6a-b385-4c68-b762-9389fb47a585
                         LifetimeSeconds: 10.0
                         PrefabToSpawnOnDeath: null
                     97feddba0b5a0c141c0abbf1e2ce65fa: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
-                        Id: cdba6aed-d349-4332-9e52-095a0a9ce46e
+                        Id: 52ea004d-ac3b-40c1-9842-87c2aad1e21c
                         DamageAmount: 1.0
                         SoundToPlayOnDeath: a8f3cc1b-88da-428f-b66a-c46db515467d:Sounds/hitHurt
                         PrefabToSpawnOnDeath: null
-                    8d144d7586d7ac59c302350a8c45b3fa: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 91dd5db7-0675-4e80-90c5-3ff009997a83
+                    49f43bac3779d77e18ae51c959537010: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: e569943f-bd93-4a13-b76f-e207e58c3f5c
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
-                                6e995fca841a96d305412dbe5754beeb: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                072076198b13333fc8c6e50bd66ac982: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: -0.35}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                                     Size: {X: 0.25, Y: 0.25, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
-                        FrictionCoefficient: 0.5
+                        FrictionCoefficient: 1.0
                         MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer3
                         CollisionGroup: {}
-                        ContactEventHandler: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! cdba6aed-d349-4332-9e52-095a0a9ce46e
-                        Kinematic: true
+                        ContactEventHandler: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! 52ea004d-ac3b-40c1-9842-87c2aad1e21c
+                        Kinematic: false
                         Gravity: false
-                        InterpolationMode: None
                         ContinuousDetectionMode: Discrete
+                        InterpolationMode: None
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32

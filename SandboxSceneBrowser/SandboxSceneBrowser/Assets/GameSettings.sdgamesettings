@@ -24,6 +24,7 @@ Defaults:
     - !Stride.BepuPhysics.BepuConfiguration,Stride.BepuPhysics
         BepuSimulations:
             -   AssociatedScene: null
+                ThreadCount: -1
                 Enabled: true
                 ParallelUpdate: true
                 Deterministic: false
@@ -38,6 +39,10 @@ Defaults:
                 SolverSubStep: 1
                 SoftStartDuration: 0:00:00:01.0000000
                 SoftStartSubstepFactor: 4
+                Layer0: Layer0, Layer2, Layer3, Layer4, Layer5, Layer6, Layer7, Layer8, Layer9, Layer10, Layer11, Layer12, Layer13, Layer14, Layer15, Layer16, Layer17, Layer18, Layer19, Layer20, Layer21, Layer22, Layer23, Layer24, Layer25, Layer26, Layer27, Layer28, Layer29, Layer30, Layer31
+                Layer1: Layer1, Layer2, Layer3, Layer4, Layer5, Layer6, Layer7, Layer8, Layer9, Layer10, Layer11, Layer12, Layer13, Layer14, Layer15, Layer16, Layer17, Layer18, Layer19, Layer20, Layer21, Layer22, Layer23, Layer24, Layer25, Layer26, Layer27, Layer28, Layer29, Layer30, Layer31
+                Layer2: Layer0, Layer1, Layer2, Layer4, Layer5, Layer6, Layer7, Layer8, Layer9, Layer10, Layer11, Layer12, Layer13, Layer14, Layer15, Layer16, Layer17, Layer18, Layer19, Layer20, Layer21, Layer22, Layer23, Layer24, Layer25, Layer26, Layer27, Layer28, Layer29, Layer30, Layer31
+                Layer3: Layer0, Layer1, Layer3, Layer4, Layer5, Layer6, Layer7, Layer8, Layer9, Layer10, Layer11, Layer12, Layer13, Layer14, Layer15, Layer16, Layer17, Layer18, Layer19, Layer20, Layer21, Layer22, Layer23, Layer24, Layer25, Layer26, Layer27, Layer28, Layer29, Layer30, Layer31
 Overrides: []
 PlatformFilters:
     - PowerVR SGX 54[0-9]

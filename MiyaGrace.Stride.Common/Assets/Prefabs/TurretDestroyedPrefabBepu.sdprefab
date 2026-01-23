@@ -1,74 +1,34 @@
 !PrefabAsset
-Id: 8229672f-ccd7-47f8-8668-883856709f61
+Id: 47528310-f9bd-4f54-813f-d4d6743ac54b
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 957faa64-151e-4c10-bb69-d95f15e76d39
+        - ref!! ca5a38b2-4c41-4ffc-8a91-86135743430f
     Parts:
         -   Entity:
-                Id: 2e6a6b8f-cca6-4ba2-ab8e-ba1f8a2cac09
-                Name: TurretCannon
-                Components:
-                    e43ace4b45eedb8be14cde3051c11427: !TransformComponent
-                        Id: d9e8bf06-7d9c-45ed-a0aa-fdbd1aa4e1b5
-                        Position: {X: 0.0, Y: 0.21562183, Z: 0.0}
-                        Rotation: {X: -0.6347499, Y: 0.0, Z: 0.0, W: 0.77271765}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    1efbae924543a859f187c92f146ceb0b: !ModelComponent
-                        Id: 6f69e251-044a-4b12-8052-c5d5e9649f7e
-                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
-                        Materials: {}
-                    005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
-                        Id: 8236913d-a245-4b37-9731-4b025fa414a9
-                        MinimumImpulseForce: 0.0
-                        MaximumImpulseForce: 20.0
-                    e24073c341bd3f933cf6da5fc36eb693: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 6f840ab2-81e4-40a3-8178-a44da981e6f1
-                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
-                            Colliders:
-                                f28e75bf638416651d7087f5b629f66d: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
-                                    Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 1.0}
-                                    RotationLocal: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                                    Radius: 0.1
-                                    Length: 3.0
-                        SpringFrequency: 30.0
-                        SpringDampingRatio: 3.0
-                        FrictionCoefficient: 0.5
-                        MaximumRecoveryVelocity: 1000.0
-                        CollisionGroup: {}
-                        ContactEventHandler: null
-                        Kinematic: false
-                        Gravity: true
-                        InterpolationMode: None
-                        ContinuousDetectionMode: Discrete
-                        SleepThreshold: 0.01
-                        MinimumTimestepCountUnderThreshold: 32
-        -   Entity:
-                Id: 92f8f8a9-d7f4-474d-9e6e-b7866e9c59fd
+                Id: 182daa07-cb7b-4a82-97b9-755262bb7acb
                 Name: TurretBase
                 Components:
                     4f6318bd66ea61831196b2f73e098b73: !TransformComponent
-                        Id: 239855e0-0d38-40af-bb75-9f225e538137
+                        Id: 716be0d8-690b-4185-918e-9efde595d92d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     da9f41079a9401743ae07088dfcacabf: !ModelComponent
-                        Id: b594dd82-1b84-45eb-ba5a-af5776256a54
+                        Id: 9b8580c0-4bda-42a1-8deb-160d235126ef
                         Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
                         Materials: {}
                     84114f4af4bce92371be16321e458b6b: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
-                        Id: 4475bada-a4ec-4382-9a5f-dd2e2730a2e3
+                        Id: 3e5889ca-17a1-4533-8eed-cffd11d1f461
                         MinimumImpulseForce: 0.0
                         MaximumImpulseForce: 20.0
-                    0702bf69dbe15e2878ad541676ddf795: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: a37bd34d-debd-447c-adc4-919452604ec1
+                    1cae7209d22c10559a558f854e07ee49: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: e83773f0-300d-4261-8b1f-4f101ef95d58
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
-                                7f916ccedaeff8e35197d414bc4af109: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                9d6fa1c33cd69b13e046e09c537569f7: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.25, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
@@ -76,28 +36,29 @@ Hierarchy:
                                     Length: 2.5
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
-                        FrictionCoefficient: 0.5
+                        FrictionCoefficient: 1.0
                         MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
                         CollisionGroup: {}
                         ContactEventHandler: null
                         Kinematic: false
                         Gravity: true
-                        InterpolationMode: None
                         ContinuousDetectionMode: Discrete
+                        InterpolationMode: None
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
         -   Entity:
-                Id: 930c941c-1175-4c71-895b-4614514eb2b6
+                Id: 29491a20-8002-474c-8417-d7417650b337
                 Name: InitialExplosionParticles
                 Components:
                     6f4e5a99d9bbd0f35719a6a62088e3a1: !TransformComponent
-                        Id: 160c08ba-0d2e-4591-a05c-7cb62fb1b087
+                        Id: cfcd2faa-7500-4281-8c3e-a47a8c701298
                         Position: {X: 0.0, Y: 1.7677003, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     14e05da19f61d68e8eee6446d30552e6: !ParticleSystemComponent
-                        Id: 842f77f7-c234-4ba1-a8da-0c6332cd5c72
+                        Id: a6a81f79-da29-455e-ad64-4f9ce8796d78
                         Control:
                             ResetSeconds: 2.0
                             Control: Play
@@ -185,19 +146,60 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: false
         -   Entity:
-                Id: 957faa64-151e-4c10-bb69-d95f15e76d39
+                Id: 7d1bf8eb-11fe-4863-a1da-9d29db5b2643
+                Name: TurretCannon
+                Components:
+                    e43ace4b45eedb8be14cde3051c11427: !TransformComponent
+                        Id: 9381cd0d-8d09-4c93-bee0-bfece0a7da62
+                        Position: {X: 0.0, Y: 0.21562183, Z: 0.0}
+                        Rotation: {X: -0.6347499, Y: 0.0, Z: 0.0, W: 0.77271765}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1efbae924543a859f187c92f146ceb0b: !ModelComponent
+                        Id: 47684783-5b1d-434e-8936-7a6ed071397c
+                        Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
+                        Materials: {}
+                    005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
+                        Id: 36052341-924e-4d60-a25e-5d5e8d57262c
+                        MinimumImpulseForce: 0.0
+                        MaximumImpulseForce: 20.0
+                    0e9006d4c2edac70bf3f9589849ebae4: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 7421b6f5-1699-4ed4-a5d8-be089a637538
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                564363df330e648096b9aad388125393: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                    RotationLocal: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                                    Radius: 0.1
+                                    Length: 3.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        ContinuousDetectionMode: Discrete
+                        InterpolationMode: None
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Entity:
+                Id: ca5a38b2-4c41-4ffc-8a91-86135743430f
                 Name: PrefabRoot
                 Components:
                     5b2b8e1c2a94ad61c93bce92df717076: !TransformComponent
-                        Id: b50900fd-d073-4ee2-9d38-3d46a8087ffa
+                        Id: 5bcc784a-e2d2-4a09-b178-182fbf980f62
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 239855e0-0d38-40af-bb75-9f225e538137
-                            33f2b671ac95b8bf1394e6841a413356: ref!! d9e8bf06-7d9c-45ed-a0aa-fdbd1aa4e1b5
-                            e45f3fec64920cd5d60c898373c3d80c: ref!! 160c08ba-0d2e-4591-a05c-7cb62fb1b087
+                            fb733c8bda7c045e2e9ee6e36114711c: ref!! 716be0d8-690b-4185-918e-9efde595d92d
+                            33f2b671ac95b8bf1394e6841a413356: ref!! 9381cd0d-8d09-4c93-bee0-bfece0a7da62
+                            e45f3fec64920cd5d60c898373c3d80c: ref!! cfcd2faa-7500-4281-8c3e-a47a8c701298
                     64a1f437baa5eacdb703635f53c8cc1e: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
-                        Id: cc56506d-35e4-404a-a45f-1f916a0eba10
+                        Id: 0d7853b4-0ca9-458c-8e41-2f0c6450b34b
                         LifetimeSeconds: 2.0
                         PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion

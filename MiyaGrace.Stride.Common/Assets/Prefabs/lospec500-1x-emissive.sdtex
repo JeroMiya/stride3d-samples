@@ -1,0 +1,11 @@
+!Texture
+Id: 3fed583f-4da2-46b2-8393-0c7876dd2d2e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Models/lospec500-1x-emissive.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+    PremultiplyAlpha: false
+GenerateMipmaps: false
+IsStreamable: false
