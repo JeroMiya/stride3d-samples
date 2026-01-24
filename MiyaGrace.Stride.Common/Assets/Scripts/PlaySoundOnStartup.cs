@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// This script plays a sound on Start of an entity. Typically,

@@ -1,8 +1,6 @@
-﻿using BepuPhysics.Collidables;
+﻿using Stride.BepuPhysics.Definitions.Contacts;
 
-using Stride.BepuPhysics.Definitions.Contacts;
-
-namespace MiyaGrace.Stride.Common.ProjectileScripts;
+namespace MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts;
 
 /// <summary>
 /// Simple script to remove an entity from the scene
@@ -11,7 +9,7 @@ namespace MiyaGrace.Stride.Common.ProjectileScripts;
 /// sound when the hit happens. Requires a BodyComponent
 /// to be attached to the same entity.
 /// </summary>
-public class ProjectileDieOnCollide : SyncScript, IContactEventHandler
+public class ProjectileDieOnCollide : SyncScript, IContactHandler
 {
     /// <summary>
     /// If the entity collides with an entity that has a HealthComponent
@@ -32,21 +30,9 @@ public class ProjectileDieOnCollide : SyncScript, IContactEventHandler
 
     public bool NoContactResponse => true;
 
-    public override void Update()
+    void IContactHandler.OnStartedTouching<TManifold>(Contacts<TManifold> contacts)
     {
-        
-    }
-
-    void IContactEventHandler.OnStartedTouching<TManifold>(
-        CollidableComponent eventSource,
-        CollidableComponent other,
-        ref TManifold contactManifold,
-        bool flippedManifold,
-        int workerIndex,
-        BepuSimulation bepuSimulation)
-    {
-        // When something enters inside this object
-        var healthComponent = other.Entity.Get<HealthComponent>();
+        var healthComponent = contacts.Other.Entity.Get<HealthComponent>();
         healthComponent?.DoDamage(DamageAmount);
 
         PrefabToSpawnOnDeath?.InstantiateInSceneAtEntity(Entity);
@@ -58,4 +44,6 @@ public class ProjectileDieOnCollide : SyncScript, IContactEventHandler
 
         Entity.Scene = null;
     }
+
+    public override void Update() { }
 }

@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// This script requires a HealthComponent to also be

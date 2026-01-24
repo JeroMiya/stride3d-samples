@@ -1,4 +1,6 @@
-﻿namespace MiyaGrace.Stride.Common.Extensions;
+﻿using MiyaGrace.Stride.Common.Assets.Scripts;
+
+namespace MiyaGrace.Stride.Common.Extensions;
 
 /// <summary>
 /// NOTE: These extensions really belong in the game project as they'll 

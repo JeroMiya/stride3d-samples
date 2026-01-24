@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common.ProjectileScripts;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts;
 
 /// <summary>
 /// Simple script to remove the projectile entity from

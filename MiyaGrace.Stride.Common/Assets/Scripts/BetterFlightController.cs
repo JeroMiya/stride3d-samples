@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// My second attempt at a flight controller. Still very

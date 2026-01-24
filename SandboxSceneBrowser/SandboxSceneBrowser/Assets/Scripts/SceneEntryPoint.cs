@@ -1,4 +1,4 @@
-﻿namespace SandboxSceneBrowser;
+﻿namespace SandboxSceneBrowser.Assets.Scripts;
 
 public class SceneEntryPoint : SyncScript
 {

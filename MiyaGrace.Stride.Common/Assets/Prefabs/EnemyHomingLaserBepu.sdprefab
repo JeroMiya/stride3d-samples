@@ -20,20 +20,20 @@ Hierarchy:
                         Id: 35a9bdb0-5f3e-4209-b2c3-019e50e1636c
                         Model: 7eb02fb5-784c-4cbc-8da0-11dfdf41215d:Models/BasicLaser
                         Materials: {}
-                    1401c91547280b3986cc171607d0acdd: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileHomingMovement,MiyaGrace.Stride.Common
+                    1401c91547280b3986cc171607d0acdd: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileHomingMovement,MiyaGrace.Stride.Common
                         Id: 152da5ba-2343-46d0-ae1e-10ba7e7c76da
                         Target: null
                         TurnSpeed: 0.1
-                        MovementSpeed: 5.0
-                    0c9512dc5447165967f81c336f102145: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
+                        MovementSpeed: 20.0
+                    0c9512dc5447165967f81c336f102145: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
                         Id: b2795d6a-b385-4c68-b762-9389fb47a585
                         LifetimeSeconds: 10.0
-                        PrefabToSpawnOnDeath: null
-                    97feddba0b5a0c141c0abbf1e2ce65fa: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
+                        PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion
+                    97feddba0b5a0c141c0abbf1e2ce65fa: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
                         Id: 52ea004d-ac3b-40c1-9842-87c2aad1e21c
                         DamageAmount: 1.0
                         SoundToPlayOnDeath: a8f3cc1b-88da-428f-b66a-c46db515467d:Sounds/hitHurt
-                        PrefabToSpawnOnDeath: null
+                        PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion
                     49f43bac3779d77e18ae51c959537010: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: e569943f-bd93-4a13-b76f-e207e58c3f5c
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -49,10 +49,10 @@ Hierarchy:
                         MaximumRecoveryVelocity: 1000.0
                         CollisionLayer: Layer3
                         CollisionGroup: {}
-                        ContactEventHandler: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! 52ea004d-ac3b-40c1-9842-87c2aad1e21c
+                        ContactEventHandler: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! 52ea004d-ac3b-40c1-9842-87c2aad1e21c
                         Kinematic: false
                         Gravity: false
-                        ContinuousDetectionMode: Discrete
-                        InterpolationMode: None
+                        ContinuousDetectionMode: Continuous
+                        InterpolationMode: Interpolated
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32

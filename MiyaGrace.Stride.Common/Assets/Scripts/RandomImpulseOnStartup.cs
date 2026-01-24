@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// If the attached entity has a BodyComponent, this script will

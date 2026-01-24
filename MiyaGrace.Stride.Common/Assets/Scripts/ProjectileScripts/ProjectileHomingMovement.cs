@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common.ProjectileScripts;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts;
 
 /// <summary>
 /// Simple homing projectile movement script. Attempts to smoothly
@@ -24,12 +24,17 @@ public class ProjectileHomingMovement : SyncScript
     /// </summary>
     public float MovementSpeed { get; set; } = 0.1f;
 
+    private BodyComponent body = null!;
+
     public override void Start()
     {
         if(Target == null)
         {
             Game.Services.GetServiceLate<PlayerEntityService>(s => Target = s.PlayerEntity);
         }
+
+        body = Entity.Get<BodyComponent>()
+            ?? throw new InvalidOperationException("Could not find BodyComponent");
     }
 
     public override void Update()
@@ -51,22 +56,8 @@ public class ProjectileHomingMovement : SyncScript
 
         var movement = Entity.GetModelWorldForward();
         movement.Normalize();
-        movement *= MovementSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        movement *= MovementSpeed;
 
-        var parent = Entity.GetParent();
-        if (parent == null)
-        {
-            Entity.Transform.Position += movement;
-        }
-        else
-        {
-            var inverseParentWorldRotation = parent.GetWorldRotation();
-            inverseParentWorldRotation.Invert();
-            inverseParentWorldRotation.Normalize();
-
-            movement = inverseParentWorldRotation * movement;
-
-            Entity.Transform.Position += movement;
-        }
+        body.LinearVelocity = movement;
     }
 }

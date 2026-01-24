@@ -18,7 +18,7 @@ Hierarchy:
                         Children:
                             3d43ec7c6c4dccfd97236cd33aeda06a: ref!! f4f1f740-f44c-4830-b761-a8410102f9bb
                             71731564af71293dd2ea6be9aedf269e: ref!! 9f89874d-adc3-41ee-bffd-75c8a8948560
-                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.LookTowardsPlayer,MiyaGrace.Stride.Common
+                    57fd7c567acf8d752b60ff3844922977: !MiyaGrace.Stride.Common.Assets.Scripts.LookTowardsPlayer,MiyaGrace.Stride.Common
                         Id: 6b31c41e-330b-4b96-9a4b-c94060934f9e
                         TurnSpeed: 0.1
         -   Entity:
@@ -33,11 +33,11 @@ Hierarchy:
                         Children:
                             fb733c8bda7c045e2e9ee6e36114711c: ref!! 0ecd115f-93d0-4056-a9a0-bebc02b06cc9
                             5b798ce0603968b062ba9e25598db50d: ref!! d29bd936-86e1-480a-a2e8-c56011f818f8
-                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.HealthComponent,MiyaGrace.Stride.Common
+                    4cfa67e942f21e5d42de595ac1fd211c: !MiyaGrace.Stride.Common.Assets.Scripts.HealthComponent,MiyaGrace.Stride.Common
                         Id: 4d07ce08-aba9-4885-885f-86d1badab6ec
                         MaxHealth: 10.0
                         Defense: 0.0
-                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.RemoveEntityOnDeath,MiyaGrace.Stride.Common
+                    fa7d7d09e0f07902b98b81561169b78a: !MiyaGrace.Stride.Common.Assets.Scripts.RemoveEntityOnDeath,MiyaGrace.Stride.Common
                         Id: f3b64aea-7406-4883-bc03-8a400ed15faf
                         SoundToPlayOnDeath: 7b0e64eb-86c9-42ae-a37f-d599dcaf9bd3:Sounds/explosion
                         PrefabToSpawnOnDeath: 47528310-f9bd-4f54-813f-d4d6743ac54b:Prefabs/TurretDestroyedPrefabBepu
@@ -88,12 +88,12 @@ Hierarchy:
                         UseHRTF: true
                         DirectionalFactor: 0.0
                         Environment: Outdoors
-                    343f37d64503431272b0e4c5ea199be8: !MiyaGrace.Stride.Common.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
+                    343f37d64503431272b0e4c5ea199be8: !MiyaGrace.Stride.Common.Assets.Scripts.FireProjectileWhenPointedAtPlayer,MiyaGrace.Stride.Common
                         Id: 6d8a4e18-460b-4453-8cbf-d96fdaf75c46
                         ProjectileSoundEmitterControllerKey: laser
                         ProjectilePrefab: 723a56d0-f525-4ffb-902d-eeb0c6d08448:Prefabs/EnemyHomingLaserBepu
                         RaycastBufferSize: 5
-                        FireRate: 0.5
+                        FireRate: 0.15
                         MaxDistance: 100.0
                         CollideWithGroup: Everything
                         CollideWithTriggers: false

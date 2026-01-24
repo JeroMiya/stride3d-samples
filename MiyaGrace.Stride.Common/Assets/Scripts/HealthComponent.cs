@@ -1,4 +1,4 @@
-﻿namespace MiyaGrace.Stride.Common;
+﻿namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// A simple experiment to handle game state, in this case

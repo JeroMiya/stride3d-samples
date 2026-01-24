@@ -23,7 +23,7 @@ Hierarchy:
                         UseHRTF: true
                         DirectionalFactor: 0.0
                         Environment: Outdoors
-                    cb46fe4aaea536edaf70f95283d1ea51: !MiyaGrace.Stride.Common.PlaySoundOnStartup,MiyaGrace.Stride.Common
+                    cb46fe4aaea536edaf70f95283d1ea51: !MiyaGrace.Stride.Common.Assets.Scripts.PlaySoundOnStartup,MiyaGrace.Stride.Common
                         Id: ced76a7c-eb8c-4c25-bf93-a76c2e499ed4
                         SoundControllerKey: explosion
                         RemoveEntityOnSoundFinished: true

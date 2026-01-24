@@ -1,6 +1,6 @@
 ﻿using MiyaGrace.Stride.Common.Services;
 
-namespace MiyaGrace.Stride.Common;
+namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// This script initializes the PlayerEntityService on scene startup.

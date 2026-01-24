@@ -23,5 +23,5 @@ Hierarchy:
                         Page: 362a7b98-e8c3-47a3-a213-02d9c340116e:Scenes/MainMenu/MainMenuUi
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
-                    d84947ea7dfa0a6c7c0455490ebbac8b: !SandboxSceneBrowser.MainMenuLogic,SandboxSceneBrowser
+                    d84947ea7dfa0a6c7c0455490ebbac8b: !SandboxSceneBrowser.Assets.Scripts.MainMenuLogic,SandboxSceneBrowser
                         Id: 8563373a-f4c5-466c-ade8-982c646d56d0

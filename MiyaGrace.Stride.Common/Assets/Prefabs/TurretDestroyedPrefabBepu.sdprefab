@@ -20,7 +20,7 @@ Hierarchy:
                         Id: 9b8580c0-4bda-42a1-8deb-160d235126ef
                         Model: 1c0349b3-e22c-49f2-a63b-2230ddf30900:Models/TurretBase
                         Materials: {}
-                    84114f4af4bce92371be16321e458b6b: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
+                    84114f4af4bce92371be16321e458b6b: !MiyaGrace.Stride.Common.Assets.Scripts.RandomImpulseOnStartup,MiyaGrace.Stride.Common
                         Id: 3e5889ca-17a1-4533-8eed-cffd11d1f461
                         MinimumImpulseForce: 0.0
                         MaximumImpulseForce: 20.0
@@ -43,8 +43,8 @@ Hierarchy:
                         ContactEventHandler: null
                         Kinematic: false
                         Gravity: true
-                        ContinuousDetectionMode: Discrete
-                        InterpolationMode: None
+                        ContinuousDetectionMode: Continuous
+                        InterpolationMode: Interpolated
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
         -   Entity:
@@ -159,7 +159,7 @@ Hierarchy:
                         Id: 47684783-5b1d-434e-8936-7a6ed071397c
                         Model: d940d92f-0819-4641-a732-65d2d08a64e8:Models/TurretCannon
                         Materials: {}
-                    005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.RandomImpulseOnStartup,MiyaGrace.Stride.Common
+                    005edefd638047361387c6af0b6799fb: !MiyaGrace.Stride.Common.Assets.Scripts.RandomImpulseOnStartup,MiyaGrace.Stride.Common
                         Id: 36052341-924e-4d60-a25e-5d5e8d57262c
                         MinimumImpulseForce: 0.0
                         MaximumImpulseForce: 20.0
@@ -182,8 +182,8 @@ Hierarchy:
                         ContactEventHandler: null
                         Kinematic: false
                         Gravity: true
-                        ContinuousDetectionMode: Discrete
-                        InterpolationMode: None
+                        ContinuousDetectionMode: Continuous
+                        InterpolationMode: Interpolated
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
         -   Entity:
@@ -199,7 +199,7 @@ Hierarchy:
                             fb733c8bda7c045e2e9ee6e36114711c: ref!! 716be0d8-690b-4185-918e-9efde595d92d
                             33f2b671ac95b8bf1394e6841a413356: ref!! 9381cd0d-8d09-4c93-bee0-bfece0a7da62
                             e45f3fec64920cd5d60c898373c3d80c: ref!! cfcd2faa-7500-4281-8c3e-a47a8c701298
-                    64a1f437baa5eacdb703635f53c8cc1e: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
+                    64a1f437baa5eacdb703635f53c8cc1e: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
                         Id: 0d7853b4-0ca9-458c-8e41-2f0c6450b34b
                         LifetimeSeconds: 2.0
                         PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion

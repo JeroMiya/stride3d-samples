@@ -1,6 +1,6 @@
 ﻿using Stride.BepuPhysics.Definitions.Colliders;
 
-namespace MiyaGrace.Stride.Common;
+namespace MiyaGrace.Stride.Common.Assets.Scripts;
 
 /// <summary>
 /// Very broken and cursed first attempt at a flight script

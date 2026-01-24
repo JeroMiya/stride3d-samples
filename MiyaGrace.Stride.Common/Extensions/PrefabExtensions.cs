@@ -32,6 +32,11 @@ public static class PrefabExtensions
     /// </summary>
     public static void InstantiateInSceneAtEntity(this Prefab prefab, Entity entity)
     {
+        if(entity.Scene == null)
+        {
+            return;
+        }
+
         var worldPosition = entity.GetWorldPosition();
         var worldRotation = entity.GetWorldRotation();
 

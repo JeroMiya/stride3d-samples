@@ -16,20 +16,20 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    0da1b3a5f0d91fe5320aa365e041b690: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
+                    0da1b3a5f0d91fe5320aa365e041b690: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common
                         Id: 8b17e5a6-35be-4add-8dc1-24d61c4ce735
                         DamageAmount: 0.0
                         SoundToPlayOnDeath: a8f3cc1b-88da-428f-b66a-c46db515467d:Sounds/hitHurt
                         PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion
-                    358e14a9a55be65ba3919984f9443006: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
+                    358e14a9a55be65ba3919984f9443006: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileLifetimeScript,MiyaGrace.Stride.Common
                         Id: d85ecc8c-9080-4549-bc72-adc9e5ac4054
                         LifetimeSeconds: 5.0
-                        PrefabToSpawnOnDeath: null
+                        PrefabToSpawnOnDeath: 694dd309-ef55-4b8f-a8e9-8b9f6313af38:Prefabs/RedParticleExplosion
                     488dc38e8ea4179fe0ccd42aadd6e963: !ModelComponent
                         Id: ae22fdba-3ed6-44d5-a419-a4ea55825152
                         Model: 7eb02fb5-784c-4cbc-8da0-11dfdf41215d:Models/BasicLaser
                         Materials: {}
-                    472d714e9105e402f75cc91d5ccb0194: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileStaticMovementScript,MiyaGrace.Stride.Common
+                    472d714e9105e402f75cc91d5ccb0194: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileStaticMovementScript,MiyaGrace.Stride.Common
                         Id: c68246c1-be47-41f5-b6b4-ba1e2d18babe
                         MovementSpeed: 50.0
                     df2869c9821e0a4ba6f6365e49813df4: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
@@ -47,10 +47,10 @@ Hierarchy:
                         MaximumRecoveryVelocity: 1000.0
                         CollisionLayer: Layer3
                         CollisionGroup: {}
-                        ContactEventHandler: !MiyaGrace.Stride.Common.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! 8b17e5a6-35be-4add-8dc1-24d61c4ce735
+                        ContactEventHandler: !MiyaGrace.Stride.Common.Assets.Scripts.ProjectileScripts.ProjectileDieOnCollide,MiyaGrace.Stride.Common ref!! 8b17e5a6-35be-4add-8dc1-24d61c4ce735
                         Kinematic: false
                         Gravity: true
-                        ContinuousDetectionMode: Discrete
-                        InterpolationMode: None
+                        ContinuousDetectionMode: Continuous
+                        InterpolationMode: Interpolated
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
